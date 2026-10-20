@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Clock, Send, ShieldAlert, Sparkles, CheckCircle } from "lucide-react";
+import { Clock, Send, CheckCircle } from "lucide-react";
 
 interface Stage {
   num: string;
@@ -15,53 +15,35 @@ interface Stage {
 const stages: Stage[] = [
   {
     num: "Stage 1",
-    stageName: "3 days before",
-    timeframe: "D - 3 Days",
-    desc: "A friendly heads-up with the payment button so proactive members clear dues early.",
-    tone: "Gentle & Courteous",
+    stageName: "1 day before",
+    timeframe: "D - 1 Day (Tomorrow)",
+    desc: "A friendly heads-up reminder giving members advance notice so they can renew early.",
+    tone: "Friendly Heads-up",
     sampleMessage:
-      "Hi Anjali, your AR Fitness membership is coming up for renewal in 3 days (25 Oct). Tap here to renew early with UPI: [Pay ₹1,800]. Have an energetic workout!",
+      "Hi Anjali, your AR Fitness membership expires tomorrow (25 Oct). Tap here to renew early with UPI: [Pay ₹1,800]. Keep up your great momentum!",
   },
   {
     num: "Stage 2",
-    stageName: "2 days before",
-    timeframe: "D - 2 Days",
-    desc: "A polite follow-up reminder if they have not paid yet. Skipped if already marked paid.",
-    tone: "Helpful Reminder",
+    stageName: "On due date",
+    timeframe: "Due Date (9:00 AM IST)",
+    desc: "Official renewal message sent at 9:00 AM with the exact dues breakdown and 1-tap payment link.",
+    tone: "Official Due Notice",
     sampleMessage:
-      "Hello Anjali, quick reminder that your monthly membership renews on 25 Oct. Keep your uninterrupted access by clearing dues here: [Pay ₹1,800]. Thank you!",
+      "Good morning Anjali. Your membership fee of ₹1,800 is due today (25 Oct). Please complete payment using this secure link: [Pay ₹1,800 with UPI].",
   },
   {
     num: "Stage 3",
-    stageName: "Tomorrow",
-    timeframe: "D - 1 Day",
-    desc: "Expires tomorrow. Urges renewal before access pause.",
-    tone: "Timely Alert",
-    sampleMessage:
-      "Hi Anjali, your membership expires tomorrow! Renew now in one tap via Google Pay or PhonePe to ensure continuous access: [Pay ₹1,800].",
-  },
-  {
-    num: "Stage 4",
-    stageName: "Due today",
-    timeframe: "Due Date (9:00 AM)",
-    desc: "Due today with the exact amount, invoice summary and direct UPI pay link.",
-    tone: "Official Invoice",
-    sampleMessage:
-      "Good morning Anjali. Your membership is due today (25 Oct) for ₹1,800. Please complete payment using this secure link: [Pay ₹1,800 with UPI].",
-  },
-  {
-    num: "Stage 5",
     stageName: "1 day overdue",
-    timeframe: "D + 1 Day",
-    desc: "An urgent renewal link. Expired members renew from the payment date, keeping records fair.",
+    timeframe: "D + 1 Day (Overdue)",
+    desc: "An urgent follow-up renewal link. Expired members renew from their payment date, keeping records fair.",
     tone: "Urgent Renewal",
     sampleMessage:
-      "Hi Anjali, your membership was due yesterday. To avoid service disruption or re-admission fees, please clear your outstanding dues: [Renew Now ₹1,800].",
+      "Hi Anjali, your membership was due yesterday. To avoid service disruption, please clear your outstanding dues here: [Renew Now ₹1,800].",
   },
 ];
 
 export default function Cadence() {
-  const [activeStage, setActiveStage] = useState(0);
+  const [activeStage, setActiveStage] = useState(1); // default to 'On due date'
   const current = stages[activeStage];
 
   return (
@@ -72,15 +54,15 @@ export default function Cadence() {
             <Clock size={14} />
             <span>Smart Automation Sequence</span>
           </div>
-          <h2 className="h">Five reminders. Zero chasing.</h2>
+          <h2 className="h">Three timely reminders. Zero chasing.</h2>
           <p className="sub">
-            Every day at 9:00 AM IST, AR checks who is coming due and messages
-            them at exactly the right moment. Anyone marked Paid is skipped
-            automatically, so nobody ever gets an embarrassing overdue notice.
+            Every day at 9:00 AM IST, AR automatically checks who needs a message:
+            1 day before, on their due date, and 1 day overdue. Anyone already
+            marked Paid is skipped automatically, so nobody ever gets an unwanted reminder.
           </p>
         </div>
 
-        <div className="five">
+        <div className="three-cadence">
           {stages.map((s, idx) => (
             <div
               key={idx}
@@ -90,7 +72,7 @@ export default function Cadence() {
               <div className="stage-pill">
                 <span>{s.num}</span>
                 {activeStage === idx && (
-                  <CheckCircle size={13} color="var(--lime-accent)" />
+                  <CheckCircle size={14} color="var(--lime-accent)" />
                 )}
               </div>
               <h3>{s.stageName}</h3>

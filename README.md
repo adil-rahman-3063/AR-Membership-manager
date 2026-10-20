@@ -7,7 +7,7 @@ Automated membership dues tracking and renewal system with WhatsApp reminders an
 ## ⚡ Features
 
 - **Automatic WhatsApp Reminders**: Direct notifications sent via official Meta WhatsApp Cloud API.
-- **Smart 5-Stage Cadence**: Automated sequence (3 days before, 2 days before, tomorrow, due today, 1 day overdue).
+- **Smart 3-Stage Cadence**: Automated sequence (1 day before, on due date, and 1 day overdue).
 - **Flexible Payments**:
   - Direct UPI straight into your bank account with 0% gateway fee.
   - Cashfree checkout integration with automatic transaction marking and instant renewal.

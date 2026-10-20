@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Cadence from "@/components/Cadence";
+import ComparisonSection from "@/components/ComparisonSection";
 import HowItWorks from "@/components/HowItWorks";
 import DataOwnership from "@/components/DataOwnership";
 import RoiCalculator from "@/components/RoiCalculator";
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Features />
       <Cadence />
+      <ComparisonSection />
       <RoiCalculator />
       <HowItWorks />
       <DataOwnership />

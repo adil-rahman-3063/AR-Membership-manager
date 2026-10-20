@@ -620,10 +620,16 @@ input, select {
   transform: scale(1.08);
 }
 
-/* 5 Reminders Cadence */
+/* 3 Reminders Cadence */
+.three-cadence {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
 .five {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
@@ -1446,6 +1452,127 @@ input, select {
     left: 50%;
   }
 }
+
+/* Comparison Section Styles */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.comparison-card {
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.comparison-card.manual {
+  background: rgba(35, 20, 14, 0.7);
+  border: 1px solid rgba(248, 113, 113, 0.25);
+}
+
+.comparison-card.ar {
+  background: var(--bg-card);
+  border: 1.5px solid var(--lime-accent);
+  box-shadow: 0 16px 40px rgba(184, 245, 60, 0.12);
+}
+
+.comp-header {
+  margin-bottom: 28px;
+}
+
+.comp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.comp-badge.manual {
+  background: rgba(248, 113, 113, 0.12);
+  color: #f87171;
+  border: 1px solid rgba(248, 113, 113, 0.3);
+}
+
+.comp-badge.ar {
+  background: rgba(184, 245, 60, 0.15);
+  color: var(--lime-accent);
+  border: 1px solid rgba(184, 245, 60, 0.35);
+}
+
+.comp-title {
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: var(--text-primary);
+}
+
+.comp-sub {
+  color: var(--text-muted);
+  font-size: 14.5px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.comp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.comp-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.comp-icon-box {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.comp-item-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+
+.comp-item-title.manual {
+  color: #fca5a5;
+}
+
+.comp-item-title.ar {
+  color: var(--lime-accent);
+}
+
+.comp-item-desc {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .three-cadence {
+    grid-template-columns: 1fr;
+  }
+  .comparison-card {
+    padding: 26px 18px;
+  }
+}
+
 
 
 
