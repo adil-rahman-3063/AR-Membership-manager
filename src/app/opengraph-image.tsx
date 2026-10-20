@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+export const dynamic = "force-static";
 export const alt = "AR Membership Manager – Dues on Autopilot";
 export const size = {
   width: 1200,
