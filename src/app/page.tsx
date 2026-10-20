@@ -13,6 +13,7 @@ import FaqSection from "@/components/FaqSection";
 import DeveloperSection from "@/components/DeveloperSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <DeveloperSection />
       <CtaSection />
       <Footer />
+      <FloatingWhatsApp />
     </main>
   );
 }
