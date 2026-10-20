@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corely – Membership dues on autopilot</title>
+<meta name="description" content="Membership dues management with automatic WhatsApp reminders and UPI payment links.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+body{margin:0;background:#150c07}
+.pg{background:#150c07;color:#f4efe6;font-family:'DM Sans',sans-serif;line-height:1.55;overflow-x:hidden}
+.pg *{box-sizing:border-box}
+.pg a{text-decoration:none;color:inherit}
+.pg a.btn{color:#150c07}
+.pg a.btn.ghost{color:#f4efe6}
+.pg .plan.hot a.btn{background:#150c07;color:#b8f53c}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.h{font-family:'Bricolage Grotesque',sans-serif;margin:0;letter-spacing:-0.02em;line-height:1.05}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:16px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px}
+.mark{width:36px;height:36px;border-radius:11px;background:#b8f53c;color:#150c07;display:grid;place-items:center;font-weight:800}
+.links{display:flex;gap:28px;color:#d6c6b6;font-weight:500}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;font-weight:700;background:#b8f53c;color:#150c07}
+.btn.ghost{background:transparent;border:1.5px solid #5a4333;color:#f4efe6}
+.hero{display:grid;grid-template-columns:1.1fr 0.9fr;gap:48px;align-items:center;padding:56px 0 88px}
+.eyebrow{display:inline-block;padding:6px 14px;border-radius:999px;background:#2a1a12;color:#b8f53c;font-weight:700;font-size:14px;margin-bottom:22px}
+.hero h1{font-size:68px;font-weight:800}
+.hero h1 em{font-style:normal;color:#b8f53c}
+.lead{font-size:19px;color:#d6c6b6;max-width:560px;margin:24px 0 32px}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.mock{position:relative;background:#2a1a12;border:1px solid #3d2a1e;border-radius:28px;padding:22px}
+.tag{position:absolute;top:-14px;left:24px;background:#150c07;border:1px solid #3d2a1e;color:#d6c6b6;font-size:13px;padding:3px 12px;border-radius:999px}
+.mem{background:#1c110b;border:1px solid #4a3321;border-radius:20px;padding:18px}
+.mt{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.av{width:46px;height:46px;border-radius:14px;background:#3d2a1e;display:grid;place-items:center;font-weight:700}
+.chip{padding:4px 12px;border-radius:999px;background:#3a2a0c;color:#f5b82e;font-weight:700;font-size:13px}
+.due{display:flex;justify-content:space-between;margin-top:16px;padding:14px 16px;background:#150c07;border-radius:14px}
+.sm{font-size:13px;color:#b9a695}
+.big{font-size:22px;font-weight:700}
+.wa{margin-top:16px;background:#0b4a3a;border-radius:18px 18px 18px 4px;padding:16px 18px;font-size:15px;color:#e4f5ee}
+.wa b{display:block;margin-bottom:6px;color:#b8f53c}
+.pay{display:inline-block;margin-top:10px;padding:8px 16px;border-radius:999px;background:#b8f53c;color:#150c07;font-weight:700;font-size:14px}
+.sec{padding:84px 0}
+.sec.alt{background:#1c110b}
+.sec h2{font-size:46px;font-weight:800;max-width:760px}
+.sub{color:#d6c6b6;font-size:18px;max-width:640px;margin:16px 0 44px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.five{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.card{background:#2a1a12;border:1px solid #3d2a1e;border-radius:24px;padding:28px}
+.card h3{font-family:'Bricolage Grotesque',sans-serif;font-size:23px;margin:0 0 10px}
+.card p{margin:0;color:#d6c6b6}
+.ic{width:44px;height:44px;border-radius:13px;background:#b8f53c;color:#150c07;display:grid;place-items:center;margin-bottom:18px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.step .n{font-family:'Bricolage Grotesque',sans-serif;font-size:56px;font-weight:800;color:#b8f53c;line-height:1}
+.step h3{font-size:20px;margin:12px 0 8px}
+.step p{margin:0;color:#d6c6b6}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.plan{border-radius:28px;padding:36px;background:#2a1a12;border:1px solid #3d2a1e}
+.plan.hot{background:#b8f53c;color:#150c07;border:0}
+.plan.hot p,.plan.hot li{color:#2c3a0a}
+.plan h3{font-family:'Bricolage Grotesque',sans-serif;font-size:30px;margin:0}
+.price{font-family:'Bricolage Grotesque',sans-serif;font-size:34px;font-weight:800;margin:18px 0 6px}
+.plan ul{list-style:none;padding:0;margin:22px 0 28px;display:grid;gap:12px}
+.plan li{padding-left:28px;position:relative;color:#e8dccf}
+.plan li:before{content:"";position:absolute;left:0;top:7px;width:14px;height:8px;border-left:3px solid currentColor;border-bottom:3px solid currentColor;transform:rotate(-45deg)}
+.plan.hot .btn{background:#150c07;color:#b8f53c}
+.note{margin-top:22px;color:#b9a695;font-size:15px}
+.cta{text-align:center;padding:96px 0}
+.cta h2{font-size:52px;font-weight:800;margin:0 auto 18px;max-width:760px}
+.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:28px 0 40px;border-top:1px solid #3d2a1e;color:#b9a695;font-size:14px}
+@media(max-width:900px){.five{grid-template-columns:1fr 1fr}.hero,.split{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}.hero h1{font-size:44px}.sec h2,.cta h2{font-size:34px}.links{display:none}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+</style>
+<style>html{scroll-behavior:smooth}</style>
+</head>
+<body>
+<div class="pg">
+<div class="wrap">
+<nav class="nav">
+<div class="logo"><span class="mark">C</span>Corely</div>
+<div class="links"><a href="#features">Features</a><a href="#how">How it works</a><a href="#pricing">Pricing</a></div>
+<a class="btn" href="https://wa.me/[YOUR WHATSAPP NUMBER]">Get a demo</a>
+</nav>
+<section class="hero">
+<div>
+<span class="eyebrow">Membership and dues management</span>
+<h1 class="h">Stop chasing payments. <em>Let WhatsApp do it.</em></h1>
+<p class="lead">Corely tracks every member's due date, sends the reminder with a UPI payment link on WhatsApp, and records the payment when it arrives. Made for gyms, tuition centres, clubs and any business that bills monthly.</p>
+<div class="row"><a class="btn" href="https://wa.me/[YOUR WHATSAPP NUMBER]">Book a free demo</a><a class="btn ghost" href="#pricing">See pricing</a></div>
+</div>
+<div class="mock">
+<span class="tag">Sample</span>
+<div class="mem">
+<div class="mt"><div style="display:flex;gap:12px;align-items:center"><div class="av">AR</div><div><div class="big">Anjali R</div><div class="sm">Member ID 14 · Monthly plan</div></div></div><span class="chip">Due soon</span></div>
+<div class="due"><div><div class="sm">Monthly dues</div><div class="big">₹[AMOUNT]</div></div><div><div class="sm">Due date</div><div class="big">[DATE]</div></div></div>
+</div>
+<div class="wa"><b>WhatsApp reminder, sent automatically</b>Hello Anjali, your membership fee is due on [DATE]. Pay in one tap and your renewal is recorded instantly.<br><span class="pay">Pay with UPI</span></div>
+</div>
+</section>
+</div>
+
+<section class="sec alt" id="features"><div class="wrap">
+<h2 class="h">Everything a subscription business needs to get paid on time</h2>
+<p class="sub">One dashboard for members, tiers, dues, payments and WhatsApp. No spreadsheets to chase, no manual reminders.</p>
+<div class="grid3"><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.8-3.6 3.4-5.5 6.5-5.5s5.7 1.9 6.5 5.5M17 5.5a3.2 3.2 0 0 1 0 6"/></svg></div><h3>Members and membership tiers</h3><p>Create your own tiers and fees, see Active, Due Soon and Overdue at a glance, and renew with +1 Month. An expired member renews from the day they pay, not the old date.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4zM10 21h4"/></svg></div><h3>Automatic WhatsApp reminders</h3><p>Reminders go out at 9:00 AM IST on their own, through the official Meta WhatsApp Cloud API from your own business number.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v6l5 1.5V17a5 5 0 0 1-5 5h-1.5a5 5 0 0 1-4-2L5 15l1.5-1.5L9 15"/></svg></div><h3>A Pay button inside the message</h3><p>Members tap one button in WhatsApp and land on a payment page. Google Pay, PhonePe, Paytm or a QR code, no typing of amounts.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M3 10h18M7 15h4"/></svg></div><h3>Two ways to collect</h3><p>Direct UPI with no gateway fees, or the Cashfree checkout for cards, netbanking and wallets with automatic payment matching.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 3h16v18l-3-2-3 2-2-2-2 2-3-2-3 2zM8 8h8M8 12h8"/></svg></div><h3>Receipts and a clean ledger</h3><p>Paid members get a WhatsApp confirmation. Every payment lands in a searchable ledger by day, week, month or year, with CSV export.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8.5 8.5 0 0 1-12.6 7.4L3 21l1.7-5.2A8.5 8.5 0 1 1 21 12z"/></svg></div><h3>Smart auto-replies</h3><p>When a member texts PAID, DUE, FEE or HELP, Corely replies with your business name, their fee and a payment link. Never more than once in 24 hours.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l15-7v16L3 13zM7 14l1.5 6"/></svg></div><h3>Campaign Studio</h3><p>Build WhatsApp templates, see Meta approval status live, and send offers or notices to filtered groups of members. No Meta API yet? Use one-tap WhatsApp links.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 0 0-14-4M4 4v4h4M4 13a8 8 0 0 0 14 4M20 20v-4h-4"/></svg></div><h3>Live chat console, synced everywhere</h3><p>Chat with members from inside the app. Changes show instantly on the front desk PC, the manager tablet and the owner phone.</p></div><div class="card"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16"/></svg></div><h3>Installs like an app</h3><p>Add it to your Windows desktop, taskbar or phone home screen and open it in one tap.</p></div></div></div></section>
+
+<section class="sec" id="cadence"><div class="wrap">
+<h2 class="h">Five reminders. Zero chasing.</h2>
+<p class="sub">Every day at 9:00 AM IST, Corely checks who is coming due and messages them at exactly the right moment. Anyone marked Paid is skipped automatically, so nobody gets a wrong overdue notice.</p>
+<div class="five">
+<div class="card"><div class="sm">Stage 1</div><h3>3 days before</h3><p>A friendly heads-up with the payment button.</p></div>
+<div class="card"><div class="sm">Stage 2</div><h3>2 days before</h3><p>A follow-up if they have not paid yet.</p></div>
+<div class="card"><div class="sm">Stage 3</div><h3>Tomorrow</h3><p>Expires tomorrow, renew early.</p></div>
+<div class="card"><div class="sm">Stage 4</div><h3>Due today</h3><p>Due today with the exact amount.</p></div>
+<div class="card"><div class="sm">Stage 5</div><h3>1 day overdue</h3><p>An urgent renewal link.</p></div>
+</div></div></section>
+<section class="sec alt" id="how"><div class="wrap">
+<h2 class="h">Live in 2–3 days, with nothing for you to set up</h2>
+<p class="sub">We do the technical work. You hand over a few details and start adding members.</p>
+<div class="steps">
+<div class="step"><div class="n">1</div><h3>Share your details</h3><p>Your business name, email, WhatsApp number and UPI ID.</p></div>
+<div class="step"><div class="n">2</div><h3>We set up your system</h3><p>A private database and a Google Sheets backup, both created on your email.</p></div>
+<div class="step"><div class="n">3</div><h3>Connect WhatsApp and payments</h3><p>We set up Meta WhatsApp API and Cashfree inside your own accounts and get your templates approved.</p></div>
+<div class="step"><div class="n">4</div><h3>Add members, relax</h3><p>Reminders and payment tracking run on their own from day one.</p></div>
+</div></div></section>
+
+<section class="sec"><div class="wrap">
+<h2 class="h">Your data stays in your accounts, not ours</h2>
+<p class="sub">Each business gets its own database. Chats, members and payments are never mixed with anyone else's.</p>
+<div class="grid3">
+<div class="card"><h3>Private database per business</h3><p>Your members, payments and chats live in a database created on your email and synced live to the dashboard.</p></div>
+<div class="card"><h3>Google Sheets cold archive</h3><p>Old chats and receipts move to your own Google Sheet automatically, with a storage meter so your database never fills up.</p></div>
+<div class="card"><h3>Export and restore anytime</h3><p>Download all members as CSV or Excel, and restore archived members back with one click.</p></div>
+</div></div></section>
+
+<section class="sec alt" id="pricing"><div class="wrap">
+<h2 class="h">Two ways to get Corely</h2>
+<p class="sub">Introductory prices. Pay monthly and we run everything for you, or pay once and own your own copy. Meta WhatsApp API and Cashfree setup in your own accounts is included in both.</p>
+<div class="split">
+<div class="plan hot"><h3>Monthly</h3><p>We host and look after it. <b>Introductory price.</b></p><div class="price">₹599<span style="font-size:16px;font-weight:500"> / month</span></div>
+<ul><li>Meta WhatsApp API and Cashfree set up in your own accounts, included</li><li>Database and Google Sheets backup created on your email</li><li>Managed hosting, maintenance and support</li><li>Ready in 2–3 days, no lock-in, cancel anytime</li></ul>
+<a class="btn" href="https://wa.me/[YOUR WHATSAPP NUMBER]">Start monthly</a></div>
+<div class="plan"><h3>Pay once</h3><p>Your own copy, on your own account. <b style="color:#b8f53c">Introductory price.</b></p><div class="price">₹15,000<span style="font-size:16px;font-weight:500"> one time</span></div>
+<ul><li>Meta WhatsApp API and Cashfree set up in your own accounts, included</li><li>Deployed to your own Cloudflare account, on the same email</li><li>Your own database and Google Sheets backup</li><li>14 days of post-launch support, then no monthly fee to us</li></ul>
+<a class="btn" href="https://wa.me/[YOUR WHATSAPP NUMBER]">Buy outright</a></div>
+</div>
+<p class="note">Third-party charges are separate and paid directly by you. Meta bills WhatsApp conversation fees to your linked card at official rates, with no markup from us. Cashfree charges 0% platform fee on your first ₹20 lakh of collections, then its standard fee (about 1.95% plus GST). You own your Meta, Google and Cashfree accounts outright.</p>
+</div></section>
+
+<section class="cta"><div class="wrap">
+<h2 class="h">See it running with your own members</h2>
+<p class="sub" style="margin:0 auto 32px">Message us on WhatsApp and we will show you a live demo.</p>
+<a class="btn" href="https://wa.me/[YOUR WHATSAPP NUMBER]">Chat on WhatsApp</a>
+</div></section>
+<div class="wrap"><div class="foot"><span>Corely · Built in Kerala</span><span>[YOUR EMAIL] · [YOUR WHATSAPP NUMBER]</span></div></div>
+</div>
+</body>
+</html>
