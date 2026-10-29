@@ -117,9 +117,9 @@ export default function RoiCalculator() {
                 </div>
               </div>
               <div>
-                <div style={{ fontSize: "11px", color: "var(--text-subtle)" }}>AR Cost</div>
+                <div style={{ fontSize: "11px", color: "var(--text-subtle)" }}>AR Monthly Fee</div>
                 <div style={{ fontSize: "18px", fontWeight: 700, color: "var(--lime-accent)" }}>
-                  Only ₹599/mo
+                  ₹0 / mo (Buy once)
                 </div>
               </div>
             </div>

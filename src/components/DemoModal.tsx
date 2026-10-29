@@ -20,7 +20,7 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
   const handleLaunchWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     const query = encodeURIComponent(
-      `Hi AR team! I would like a live demo of AR Membership.\n\nBusiness Name: ${businessName || "My Business"}\nCategory: ${category}\nPhone: ${phone || "Not specified"}\nInterested Plan: ${selectedPlan || "Monthly (₹599/mo)"}`
+      `Hi AR team! I would like a live demo of AR Membership.\n\nBusiness Name: ${businessName || "My Business"}\nCategory: ${category}\nPhone: ${phone || "Not specified"}\nInterested Plan: ${selectedPlan || "Buy Outright (₹10,599 + ₹500 setup)"}`
     );
     window.open(`https://wa.me/919876543210?text=${query}`, "_blank");
     setSubmitted(true);

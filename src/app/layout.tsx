@@ -42,20 +42,8 @@ const jsonLd = {
   "offers": [
     {
       "@type": "Offer",
-      "name": "Monthly Plan",
-      "price": "599",
-      "priceCurrency": "INR",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "599",
-        "priceCurrency": "INR",
-        "unitText": "MONTH"
-      }
-    },
-    {
-      "@type": "Offer",
-      "name": "Pay Once Plan",
-      "price": "15000",
+      "name": "Buy Outright Plan",
+      "price": "10599",
       "priceCurrency": "INR"
     }
   ],
