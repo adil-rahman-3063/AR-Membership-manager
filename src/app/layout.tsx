@@ -42,7 +42,7 @@ const jsonLd = {
   "offers": [
     {
       "@type": "Offer",
-      "name": "Buy Outright Plan",
+      "name": "Lifetime Subscription Plan",
       "price": "14999",
       "priceCurrency": "INR"
     }

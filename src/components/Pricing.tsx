@@ -5,11 +5,11 @@ import { Check, MessageCircle, Info, Sparkles, ShieldCheck, Clock, Layers } from
 import { getWhatsAppPlanUrl } from "@/lib/constants";
 
 export default function Pricing() {
-  const outrightFeatures = [
+  const lifetimeFeatures = [
     "Full instance deployed directly to your own Cloudflare account",
     "Meta WhatsApp Cloud API set up in your official business account",
     "Cashfree payment gateway configured with 0% platform fee on first ₹20L",
-    "Private isolated database & real-time automatic backup to Google Sheets",
+    "Private isolated database & backup to Google Sheets",
     "Branded WhatsApp message templates with 1-tap instant UPI payment links",
     "Automated 9:00 AM renewal alerts, overdue reminders & instant receipts",
     "14 days of dedicated post-launch onboarding, staff training & handover",
@@ -42,7 +42,7 @@ export default function Pricing() {
         </div>
 
         <div className="split">
-          {/* Plan 1: Buy Outright (Live & Active) */}
+          {/* Plan 1: Lifetime Subscription (Live & Active) */}
           <div
             className="plan"
             style={{
@@ -71,7 +71,7 @@ export default function Pricing() {
               }}
             >
               <Sparkles size={13} />
-              <span>Available Now · Lifetime License</span>
+              <span>Available Now · Lifetime Subscription</span>
             </div>
 
             <div>
@@ -86,7 +86,7 @@ export default function Pricing() {
                 }}
               >
                 <div>
-                  <h3 style={{ margin: "0 0 6px" }}>Buy Outright</h3>
+                  <h3 style={{ margin: "0 0 6px" }}>Lifetime Subscription</h3>
                   <p className="plan-sub">
                     Your own dedicated instance on your own infrastructure.{" "}
                     <b style={{ color: "var(--lime-accent)" }}>Introductory price.</b>
@@ -194,7 +194,7 @@ export default function Pricing() {
                   border: "1px solid var(--border-subtle)",
                 }}
               >
-                {outrightFeatures.map((feat, idx) => (
+                {lifetimeFeatures.map((feat, idx) => (
                   <div
                     key={idx}
                     style={{
@@ -230,14 +230,14 @@ export default function Pricing() {
 
             <div>
               <a
-                href={getWhatsAppPlanUrl("Buy Outright Plan ₹14,999 + ₹500 setup")}
+                href={getWhatsAppPlanUrl("Lifetime Subscription Plan ₹14,999 + ₹500 setup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn lg"
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <MessageCircle size={18} />
-                <span>Buy Outright on WhatsApp (₹14,999 + ₹500 setup)</span>
+                <span>Get Lifetime Subscription on WhatsApp (₹14,999 + ₹500 setup)</span>
               </a>
 
               <div
