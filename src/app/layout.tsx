@@ -43,7 +43,7 @@ const jsonLd = {
     {
       "@type": "Offer",
       "name": "Buy Outright Plan",
-      "price": "10599",
+      "price": "14999",
       "priceCurrency": "INR"
     }
   ],

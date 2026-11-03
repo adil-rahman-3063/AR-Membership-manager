@@ -28,7 +28,7 @@ export default function Pricing() {
           <p className="sub">
             No monthly subscriptions, no per-member fees, and zero vendor lock-in.
             Pay once and own your independent copy deployed directly to your own infrastructure.
-            Full Meta WhatsApp Cloud API and Cashfree setup in your own accounts is included.
+            Complete Meta WhatsApp Cloud API and Cashfree setup in your own accounts is fully handled.
           </p>
         </div>
 
@@ -122,10 +122,10 @@ export default function Pricing() {
                     textDecorationThickness: "2.5px",
                   }}
                 >
-                  ₹15,000
+                  ₹20,000
                 </span>
                 <span style={{ fontSize: "44px", fontWeight: 800, color: "var(--text-primary)" }}>
-                  ₹10,599
+                  ₹14,999
                 </span>
                 <span style={{ fontSize: "16px", fontWeight: 500, color: "var(--text-muted)" }}>
                   one-time license
@@ -143,7 +143,7 @@ export default function Pricing() {
                     textTransform: "uppercase",
                   }}
                 >
-                  Save ₹4,401
+                  Save ₹5,001
                 </span>
               </div>
 
@@ -166,7 +166,7 @@ export default function Pricing() {
                   + ₹500 one-time setup fee
                 </span>
                 <span style={{ color: "var(--text-subtle)" }}>•</span>
-                <span>Includes complete Meta WhatsApp Cloud API, Cloudflare & Cashfree deployment</span>
+                <span>For complete Meta WhatsApp Cloud API & Cashfree gateway setup</span>
               </div>
 
               <p style={{ fontSize: "14px", color: "var(--text-muted)", margin: "0 0 24px" }}>
@@ -221,14 +221,14 @@ export default function Pricing() {
 
             <div>
               <a
-                href={getWhatsAppPlanUrl("Buy Outright Plan ₹10,599 + ₹500 setup")}
+                href={getWhatsAppPlanUrl("Buy Outright Plan ₹14,999 + ₹500 setup")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn lg"
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <MessageCircle size={18} />
-                <span>Buy Outright on WhatsApp (₹10,599 + ₹500 setup)</span>
+                <span>Buy Outright on WhatsApp (₹14,999 + ₹500 setup)</span>
               </a>
 
               <div
