@@ -1,0 +1,35 @@
+# AR Membership Manager
+
+> Automated membership dues collection and ledger system with scheduled 9:00 AM WhatsApp reminders and 1-tap UPI payment links for gyms, yoga studios, tuition centres, and academies in India.
+
+AR Membership Manager replaces manual spreadsheet tracking and awkward follow-up phone calls. It connects directly to the official Meta WhatsApp Cloud API and Cashfree payment gateway, running on your own Cloudflare infrastructure with zero recurring monthly platform fees.
+
+## Core Capabilities
+- **Automated WhatsApp Cadence**: Dispatches branded renewal alerts at 9:00 AM (-3 Days, Due Day, +3 Days Overdue).
+- **1-Tap UPI Payment Links**: Direct Cashfree checkout links with dynamic member details; settlements land directly in your bank account with 0% platform cuts.
+- **Auto-Renewing Ledger**: When a member pays, their next renewal date updates automatically.
+- **Fair Late Renewals**: Overdue members renew from the actual payment date rather than lost past days.
+- **Full Data Ownership**: Code and database deploy directly into your own Cloudflare account.
+
+## Target Audience
+- Gyms & Fitness Centres
+- Sports Academies & Badminton / Tennis Clubs
+- Dance, Music & Yoga Studios
+- Tuition & Coaching Centres
+- Co-working Spaces & Monthly Subscription Businesses
+
+## Pricing (2026)
+- **Lifetime Subscription**: ₹14,999 one-time (originally ₹20,000) + ₹500 setup fee. Zero monthly platform fees. Unlimited members.
+- **Cloud SaaS**: Monthly subscription (Waitlist open).
+
+## Developer & Contact
+- Engineered by Adil Rahman
+- Website: https://membership-saas.adilrahman.cc
+- Developer Portfolio: https://adilrahman.cc
+- WhatsApp Support: +91 9207114070
+- Email: adilrahman3063@gmail.com
+
+## Machine-Readable Resources
+- [Full Documentation & Product Guide](/llms-full.txt): Complete product guide, comparison tables, and FAQ in a single file.
+- [Structured Pricing](/pricing.md): Plain-text pricing and feature breakdown for buying agents.
+- [Agent Skill](/SKILL.md): Structured instructions for AI agents to evaluate requirements and generate demo links.

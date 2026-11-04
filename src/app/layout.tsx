@@ -154,6 +154,9 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Oswald:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs Context" />
+        <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full Knowledge Bundle" />
+        <link rel="pricing" type="text/markdown" href="/pricing.md" title="Machine-Readable Pricing" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

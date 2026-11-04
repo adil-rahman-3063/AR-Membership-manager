@@ -78,6 +78,12 @@ export default function Footer() {
               <MessageCircle size={15} color="var(--lime-accent)" />
               <span>WhatsApp</span>
             </a>
+            <a href="/llms.txt" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-subtle)", fontSize: "13px" }}>
+              <span>llms.txt</span>
+            </a>
+            <a href="/pricing.md" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-subtle)", fontSize: "13px" }}>
+              <span>pricing.md</span>
+            </a>
             <span>© 2026 AR. All rights reserved.</span>
           </div>
         </div>

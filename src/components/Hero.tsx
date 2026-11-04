@@ -76,7 +76,7 @@ export default function Hero() {
           <div className="hero-left">
             <div className="eyebrow">
               <span className="pulse-dot" />
-              <span>Membership and dues management</span>
+              <span>Automated Dues Manager · November 2026</span>
             </div>
 
             <h1 className="h">
@@ -85,10 +85,7 @@ export default function Hero() {
             </h1>
 
             <p className="lead">
-              AR Membership tracks every member's due date, sends the reminder with a
-              direct UPI payment link on WhatsApp, and records the renewal when it
-              arrives. Built specifically for gyms, tuition centres, sports clubs,
-              and monthly subscription businesses.
+              AR Membership Manager is an automated dues collection and ledger system that tracks renewal dates, dispatches scheduled 9:00 AM WhatsApp reminders with 1-tap UPI payment links, and auto-renews memberships upon payment with 0% platform cuts. Built for gyms, studios, and academies.
             </p>
 
             <div className="hero-buttons">

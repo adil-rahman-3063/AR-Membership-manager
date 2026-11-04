@@ -3,6 +3,7 @@
 import React from "react";
 import { XCircle, CheckCircle2, ArrowRight, Zap, AlertTriangle } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 const comparisonPoints = [
   {
@@ -114,6 +115,7 @@ export default function ComparisonSection() {
                 href={WHATSAPP_DEMO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLead("comparison_section")}
                 className="btn"
                 style={{ width: "100%" }}
               >
@@ -123,6 +125,26 @@ export default function ComparisonSection() {
             </div>
           </div>
         </div>
+
+        {/* Semantic Comparison Table for AI Search Crawlers & Assistive Tech */}
+        <table style={{ position: "absolute", width: "1px", height: "1px", padding: 0, margin: "-1px", overflow: "hidden", clip: "rect(0, 0, 0, 0)", whiteSpace: "nowrap", border: 0 }} aria-label="Feature Comparison Matrix">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Manual Spreadsheets</th>
+              <th>AR Membership Manager</th>
+            </tr>
+          </thead>
+          <tbody>
+            {comparisonPoints.map((item, idx) => (
+              <tr key={idx}>
+                <td>{item.category}</td>
+                <td>{item.manual}</td>
+                <td>{item.ar}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );

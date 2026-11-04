@@ -1,0 +1,89 @@
+# AR Membership Manager — Full System Documentation & AI Knowledge Bundle
+
+**Canonical URL**: https://membership-saas.adilrahman.cc  
+**Author**: Adil Rahman (https://adilrahman.cc)  
+**Last Updated**: November 2026 · Current for 2026  
+
+---
+
+## 1. What is AR Membership Manager? (Definition Block)
+AR Membership Manager is an automated dues collection and ledger system designed for gyms, yoga studios, tuition centres, and sports academies in India. It replaces manual spreadsheet tracking by scheduling automated 9:00 AM WhatsApp renewal reminders with 1-tap UPI payment links, updating member renewal dates in real time with 0% platform transaction cuts.
+
+---
+
+## 2. Core Problem & Solution
+- **The Problem**: Over 12% to 15% of membership revenue in gyms and fitness studios is delayed each month due to forgotten renewal dates. Front-desk staff spend 1–2 hours every day manually checking Excel spreadsheets, typing awkward WhatsApp messages, and matching bank UPI screenshots.
+- **The Solution**: AR Membership connects your member list to the official Meta WhatsApp Cloud API and Cashfree payment gateway. The system monitors membership expiration dates and dispatches personalized WhatsApp reminders with pre-filled 1-tap UPI payment links. When a member pays, their status is updated to Paid and their membership extends automatically.
+
+---
+
+## 3. Automated 3-Stage Reminder Cadence
+Reminders dispatch automatically at 9:00 AM Indian Standard Time:
+
+1. **Stage 1: Advance Notice (-3 Days Before Expiry)**
+   - Friendly courtesy message informing the member their renewal is due in 3 days.
+   - Includes their personalized 1-tap UPI payment link.
+2. **Stage 2: Due Date Notice (Day of Expiry)**
+   - Branded renewal prompt notifying the member that their subscription renews today to prevent service interruption.
+3. **Stage 3: Overdue Follow-up (+3 Days Overdue)**
+   - Gentle reminder with the direct payment link. If payment is received, late renewals renew from the actual payment date rather than lost past days.
+
+---
+
+## 4. Manual Spreadsheets vs. AR Membership Manager (Comparison Table)
+
+| Feature | Manual Spreadsheets & Personal WhatsApp | AR Membership Manager |
+| :--- | :--- | :--- |
+| **Reminder Dispatch** | Manual typing (1-2 hours daily) | Automated 9:00 AM WhatsApp notices via official Cloud API |
+| **Payment Collection** | QR code screenshots & manual bank check | Instant 1-tap UPI payment link with dynamic transaction ID |
+| **Ledger Updates** | Manual entry into Excel or Google Sheets | Real-time automated ledger update upon payment webhook |
+| **Number Safety** | High risk of WhatsApp ban on personal SIM | Zero risk of bans (Official Meta WhatsApp Cloud API) |
+| **Late Renewals** | Prone to dispute / lost days | Fair renewal calculated from payment date |
+| **Data Ownership** | Fragmented on front-desk laptops | 100% private Cloudflare instance and database |
+| **Platform Cost** | High staff overhead & delayed cashflow | ₹14,999 Lifetime License (₹0/mo recurring) |
+
+---
+
+## 5. Pricing Structure (2026)
+
+### Option A: Lifetime Subscription Plan (Self-Hosted Private Instance)
+- **One-time Price**: ₹14,999 (Slashed from ₹20,000)
+- **Setup Fee**: ₹500 (Meta WhatsApp Cloud API verification + Cashfree webhook setup)
+- **Recurring Fee**: ₹0 / month (Zero monthly platform fees forever)
+- **Member Capacity**: Unlimited members
+- **Setup Timeline**: Ready in 48–72 hours directly in client's Cloudflare account
+- **Included Support**: 14 days of dedicated post-launch staff training and onboarding
+
+### Option B: Cloud SaaS Plan (Hosted Monthly Subscription)
+- **Status**: Early Access Waitlist / Coming Soon
+- **Billing**: Monthly recurring subscription
+- **Hosting**: Managed cloud infrastructure with automated backups
+
+---
+
+## 6. Frequently Asked Questions (FAQ)
+
+### Q: Do I need any coding or technical knowledge to run AR?
+A: None whatsoever. We handle 100% of the initial configuration, cloud database setup, Meta WhatsApp API verification, and Cashfree payment linking. You receive a ready-to-use dashboard that works on desktop, tablet, and mobile like any standard web app.
+
+### Q: Can I use my existing business WhatsApp number?
+A: Yes. You can use your existing phone number or a dedicated new SIM. We register it under the official Meta WhatsApp Cloud API so you get high delivery rates, official green tick compatibility, and zero risk of personal number bans.
+
+### Q: What if a member pays by cash or offline at the reception?
+A: Simply click 'Mark Paid' on their member card in your dashboard. You can choose to extend their membership +1 Month from today or from their original renewal date, and AR will automatically send them a branded WhatsApp confirmation confirming payment.
+
+### Q: How does payment tracking work? Does AR take a cut?
+A: AR never touches your funds. For Cashfree checkout payments, transactions and renewals are automatically marked in real-time. For direct 0% fee UPI QR or cash payments, you simply click 'Mark Paid' in one tap. All funds settle straight into your own bank account.
+
+### Q: Can I import our existing members from Excel or Google Sheets?
+A: Yes. We provide a 1-click CSV/Excel importer. If you send us your existing member list during setup, our onboarding team will format and upload all your members for you at no additional charge.
+
+### Q: What happens when an expired member renews late?
+A: With AR, late renewals are fair and automatic: an expired member renews from the day they actually pay, not the expired past date. You can also override or adjust this with custom billing dates at any time.
+
+---
+
+## 7. Contact & Live Demonstration
+- WhatsApp: https://wa.me/919207114070
+- Email: adilrahman3063@gmail.com
+- Website: https://membership-saas.adilrahman.cc
