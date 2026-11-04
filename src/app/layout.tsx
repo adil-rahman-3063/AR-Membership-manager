@@ -3,7 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ar-membership-manager.pages.dev"),
+  metadataBase: new URL("https://membership-saas.adilrahman.cc"),
   alternates: {
     canonical: "/",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       "Automate membership dues with scheduled 9:00 AM WhatsApp reminders and 1-tap UPI links for gyms, studios, and academies. 0% cuts.",
     type: "website",
     locale: "en_IN",
-    url: "https://ar-membership-manager.pages.dev",
+    url: "https://membership-saas.adilrahman.cc",
     siteName: "AR Membership Manager",
   },
   twitter: {
@@ -50,7 +50,7 @@ const jsonLd = {
       "name": "AR Membership Manager",
       "operatingSystem": "Web, Windows, macOS, Android, iOS (PWA)",
       "applicationCategory": "BusinessApplication",
-      "url": "https://ar-membership-manager.pages.dev",
+      "url": "https://membership-saas.adilrahman.cc",
       "description":
         "Automated membership dues tracking and renewal system with WhatsApp reminders and 1-tap UPI payment links.",
       "offers": [

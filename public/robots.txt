@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ar-membership-manager.pages.dev/sitemap.xml
+Sitemap: https://membership-saas.adilrahman.cc/sitemap.xml
+
