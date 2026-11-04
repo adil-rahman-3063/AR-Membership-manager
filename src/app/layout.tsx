@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  verification: {
+    google: "hBJiyQxySFWZkCT1PZoRgy7C99jBIhfKLsGXkk",
+  },
   title: "WhatsApp Membership Dues & Payment Reminders | AR Manager",
   description:
     "Automate membership dues with scheduled 9:00 AM WhatsApp reminders and 1-tap UPI links for gyms, studios, and academies. 0% cuts. Book a 10-minute live demo.",
