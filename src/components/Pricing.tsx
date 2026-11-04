@@ -3,6 +3,7 @@
 import React from "react";
 import { Check, MessageCircle, Info, ShieldCheck, Clock, Layers } from "lucide-react";
 import { getWhatsAppPlanUrl } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 export default function Pricing() {
   const lifetimeFeatures = [
@@ -227,6 +228,7 @@ export default function Pricing() {
                 href={getWhatsAppPlanUrl("Lifetime Subscription Plan ₹14,999 + ₹500 setup")}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLead("pricing_lifetime", { plan: "Lifetime Subscription", price: 14999 })}
                 className="btn lg"
                 style={{ width: "100%", justifyContent: "center" }}
               >
@@ -427,6 +429,7 @@ export default function Pricing() {
                 href={getWhatsAppPlanUrl("SaaS Monthly Subscription Waitlist")}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLead("pricing_saas_waitlist", { plan: "SaaS Waitlist" })}
                 className="btn ghost lg"
                 style={{ width: "100%", justifyContent: "center" }}
               >

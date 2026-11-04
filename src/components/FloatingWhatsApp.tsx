@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import { MessageCircle } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 export default function FloatingWhatsApp() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,6 +27,7 @@ export default function FloatingWhatsApp() {
         href={WHATSAPP_DEMO_URL}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={() => trackLead("floating_whatsapp")}
         className={`floating-wa-btn ${isScrolled ? "scrolled" : ""}`}
         aria-label="Chat with Adil Rahman on WhatsApp"
       >

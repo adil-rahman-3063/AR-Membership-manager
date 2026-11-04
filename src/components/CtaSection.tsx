@@ -3,6 +3,7 @@
 import React from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 export default function CtaSection() {
   return (
@@ -22,6 +23,7 @@ export default function CtaSection() {
             href={WHATSAPP_DEMO_URL}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={() => trackLead("bottom_cta")}
             className="btn lg"
           >
             <MessageCircle size={18} />

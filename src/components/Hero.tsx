@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { MessageCircle, CheckCircle2, ArrowRight, Zap, Check } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 interface HeroProps {
   onOpenDemo?: () => void;
@@ -95,6 +96,7 @@ export default function Hero() {
                 href={WHATSAPP_DEMO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackLead("hero_primary_button")}
                 className="btn lg"
               >
                 <MessageCircle size={18} />

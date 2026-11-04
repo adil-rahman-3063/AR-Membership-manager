@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { MessageCircle, Menu, X } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,6 +42,7 @@ export default function Navbar() {
               href={WHATSAPP_DEMO_URL}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackLead("navbar_desktop")}
               className="btn sm"
               aria-label="Get a free demo"
             >
@@ -83,7 +85,10 @@ export default function Navbar() {
             href={WHATSAPP_DEMO_URL}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={() => {
+              trackLead("navbar_mobile");
+              setMobileMenuOpen(false);
+            }}
             className="btn"
             style={{ marginTop: "8px" }}
           >

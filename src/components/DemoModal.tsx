@@ -2,6 +2,8 @@
 
 import React, { useState } from "react";
 import { X, MessageCircle, CheckCircle2 } from "lucide-react";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
+import { trackLead } from "@/lib/analytics";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -19,10 +21,15 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
 
   const handleLaunchWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
+    trackLead("demo_modal_form", {
+      business_name: businessName || "unspecified",
+      business_category: category,
+      plan: selectedPlan || "Lifetime Subscription",
+    });
     const query = encodeURIComponent(
       `Hi AR team, I would like a live demo of AR Membership.\n\nBusiness: ${businessName || "My Business"}\nCategory: ${category}\nPhone: ${phone || "Not specified"}\nInterested plan: ${selectedPlan || "Lifetime Subscription (₹14,999 + ₹500 setup)"}`
     );
-    window.open(`https://wa.me/919876543210?text=${query}`, "_blank");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${query}`, "_blank");
     setSubmitted(true);
   };
 

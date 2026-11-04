@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { Calculator, ArrowRight, TrendingUp, ShieldCheck } from "lucide-react";
-import { WHATSAPP_DEMO_URL } from "@/lib/constants";
+import { WHATSAPP_NUMBER } from "@/lib/constants";
+import { trackLead, trackEvent } from "@/lib/analytics";
 
 export default function RoiCalculator() {
   const [members, setMembers] = useState(150);
@@ -125,9 +126,16 @@ export default function RoiCalculator() {
             </div>
 
             <a
-              href={WHATSAPP_DEMO_URL}
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(`Hi Adil, I tested the calculator for ${members} members (₹${fee}/mo dues, ~₹${recoveredRevenue.toLocaleString("en-IN")} delayed) and would like a live demo of AR Membership.`)}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() =>
+                trackLead("roi_calculator", {
+                  members,
+                  fee,
+                  recovered_revenue: recoveredRevenue,
+                })
+              }
               className="btn"
               style={{ width: "100%" }}
             >
