@@ -37,12 +37,12 @@ export default function HowItWorks() {
         <div className="sec-header">
           <div className="eyebrow">
             <Wrench size={14} />
-            <span>Turnkey Onboarding</span>
+            <span>Setup process</span>
           </div>
-          <h2 className="h">Live in 2–3 days, with nothing for you to set up</h2>
+          <h2 className="h">Ready in 2–3 days with full account handover</h2>
           <p className="sub">
-            We handle all the technical heavy lifting. You hand over a few details,
-            and start managing members from a clean, ready-to-use system.
+            We handle the technical setup and verification in your own accounts,
+            so you can start tracking members without managing infrastructure.
           </p>
         </div>
 
@@ -54,18 +54,19 @@ export default function HowItWorks() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  marginBottom: "8px",
+                  marginBottom: "12px",
                 }}
               >
                 <div className="n">{st.n}</div>
                 <span
                   style={{
-                    fontSize: "11px",
-                    fontWeight: 700,
+                    fontSize: "12px",
+                    fontWeight: 600,
                     color: "var(--lime-accent)",
-                    background: "rgba(184, 245, 60, 0.12)",
-                    padding: "3px 10px",
-                    borderRadius: "999px",
+                    background: "rgba(184, 245, 60, 0.08)",
+                    border: "1px solid rgba(184, 245, 60, 0.2)",
+                    padding: "2px 8px",
+                    borderRadius: "var(--radius-xs)",
                   }}
                 >
                   {st.badge}

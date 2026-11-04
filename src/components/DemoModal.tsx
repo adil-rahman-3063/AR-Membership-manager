@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, MessageCircle, Send, CheckCircle2, Sparkles } from "lucide-react";
+import { X, MessageCircle, CheckCircle2 } from "lucide-react";
 
 interface DemoModalProps {
   isOpen: boolean;
@@ -20,7 +20,7 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
   const handleLaunchWhatsApp = (e: React.FormEvent) => {
     e.preventDefault();
     const query = encodeURIComponent(
-      `Hi AR team! I would like a live demo of AR Membership.\n\nBusiness Name: ${businessName || "My Business"}\nCategory: ${category}\nPhone: ${phone || "Not specified"}\nInterested Plan: ${selectedPlan || "Lifetime Subscription (₹14,999 + ₹500 setup)"}`
+      `Hi AR team, I would like a live demo of AR Membership.\n\nBusiness: ${businessName || "My Business"}\nCategory: ${category}\nPhone: ${phone || "Not specified"}\nInterested plan: ${selectedPlan || "Lifetime Subscription (₹14,999 + ₹500 setup)"}`
     );
     window.open(`https://wa.me/919876543210?text=${query}`, "_blank");
     setSubmitted(true);
@@ -44,7 +44,7 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
         style={{
           background: "var(--bg-card)",
           border: "1px solid var(--border-strong)",
-          borderRadius: "24px",
+          borderRadius: "var(--radius-xl)",
           width: "100%",
           maxWidth: "480px",
           padding: "32px",
@@ -61,22 +61,24 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
             right: "20px",
             color: "var(--text-subtle)",
             padding: "6px",
-            borderRadius: "8px",
+            borderRadius: "var(--radius-xs)",
+            display: "grid",
+            placeItems: "center",
           }}
           aria-label="Close modal"
         >
-          <X size={20} />
+          <X size={18} />
         </button>
 
         {!submitted ? (
           <>
-            <div style={{ display: "inline-flex", alignItems: "center", gap: "6px", color: "var(--lime-accent)", fontSize: "13px", fontWeight: 700, marginBottom: "8px" }}>
-              <Sparkles size={14} />
-              <span>Live Demonstration & Walkthrough</span>
+            <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", color: "var(--lime-accent)", fontSize: "13px", fontWeight: 600, marginBottom: "8px" }}>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--lime-accent)" }} />
+              <span>Live demonstration & walkthrough</span>
             </div>
 
-            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "26px", fontWeight: 800, margin: "0 0 8px" }}>
-              Book Your AR Demo
+            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "24px", fontWeight: 600, margin: "0 0 8px" }}>
+              Book a live demo
             </h3>
             <p style={{ color: "var(--text-muted)", fontSize: "14px", marginBottom: "24px", lineHeight: 1.5 }}>
               See how automatic WhatsApp reminders and 1-tap UPI payments work for your business in 10 minutes.
@@ -84,8 +86,8 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
 
             <form onSubmit={handleLaunchWhatsApp}>
               <div style={{ marginBottom: "16px" }}>
-                <label style={{ display: "block", fontSize: "13px", fontWeight: 600, color: "var(--text-muted)", marginBottom: "6px" }}>
-                  Business / Club Name
+                <label style={{ display: "block", fontSize: "13px", fontWeight: 500, color: "var(--text-muted)", marginBottom: "6px" }}>
+                  Business / Club name
                 </label>
                 <input
                   type="text"
@@ -95,32 +97,32 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
                   onChange={(e) => setBusinessName(e.target.value)}
                   style={{
                     width: "100%",
-                    padding: "12px 16px",
-                    borderRadius: "10px",
+                    padding: "12px 14px",
+                    borderRadius: "var(--radius-md)",
                     background: "var(--bg-main)",
                     border: "1px solid var(--border-subtle)",
                     color: "var(--text-primary)",
-                    fontSize: "14.5px",
+                    fontSize: "14px",
                     outline: "none",
                   }}
                 />
               </div>
 
               <div style={{ marginBottom: "16px" }}>
-                <label style={{ display: "block", fontSize: "13px", fontWeight: 600, color: "var(--text-muted)", marginBottom: "6px" }}>
-                  Business Type
+                <label style={{ display: "block", fontSize: "13px", fontWeight: 500, color: "var(--text-muted)", marginBottom: "6px" }}>
+                  Business type
                 </label>
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
                   style={{
                     width: "100%",
-                    padding: "12px 16px",
-                    borderRadius: "10px",
+                    padding: "12px 14px",
+                    borderRadius: "var(--radius-md)",
                     background: "var(--bg-main)",
                     border: "1px solid var(--border-subtle)",
                     color: "var(--text-primary)",
-                    fontSize: "14.5px",
+                    fontSize: "14px",
                     outline: "none",
                   }}
                 >
@@ -133,8 +135,8 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
               </div>
 
               <div style={{ marginBottom: "24px" }}>
-                <label style={{ display: "block", fontSize: "13px", fontWeight: 600, color: "var(--text-muted)", marginBottom: "6px" }}>
-                  Your WhatsApp Number
+                <label style={{ display: "block", fontSize: "13px", fontWeight: 500, color: "var(--text-muted)", marginBottom: "6px" }}>
+                  Your WhatsApp number
                 </label>
                 <input
                   type="tel"
@@ -143,12 +145,12 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
                   onChange={(e) => setPhone(e.target.value)}
                   style={{
                     width: "100%",
-                    padding: "12px 16px",
-                    borderRadius: "10px",
+                    padding: "12px 14px",
+                    borderRadius: "var(--radius-md)",
                     background: "var(--bg-main)",
                     border: "1px solid var(--border-subtle)",
                     color: "var(--text-primary)",
-                    fontSize: "14.5px",
+                    fontSize: "14px",
                     outline: "none",
                   }}
                 />
@@ -168,26 +170,26 @@ export default function DemoModal({ isOpen, onClose, selectedPlan }: DemoModalPr
           <div style={{ textAlign: "center", padding: "20px 0" }}>
             <div
               style={{
-                width: "56px",
-                height: "56px",
+                width: "52px",
+                height: "52px",
                 borderRadius: "50%",
-                background: "rgba(184, 245, 60, 0.15)",
+                background: "rgba(184, 245, 60, 0.12)",
                 color: "var(--lime-accent)",
                 display: "grid",
                 placeItems: "center",
                 margin: "0 auto 16px",
               }}
             >
-              <CheckCircle2 size={32} />
+              <CheckCircle2 size={28} />
             </div>
-            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "24px", marginBottom: "8px" }}>
-              WhatsApp Chat Launched!
+            <h3 style={{ fontFamily: "var(--font-heading)", fontSize: "22px", fontWeight: 600, marginBottom: "8px" }}>
+              WhatsApp chat opened
             </h3>
-            <p style={{ color: "var(--text-muted)", fontSize: "14.5px", marginBottom: "24px", lineHeight: 1.5 }}>
+            <p style={{ color: "var(--text-muted)", fontSize: "14px", marginBottom: "24px", lineHeight: 1.5 }}>
               Check your WhatsApp window to send the demo request. Our onboarding team typically replies within 15 minutes.
             </p>
             <button onClick={onClose} className="btn ghost" style={{ width: "100%" }}>
-              Close Window
+              Close
             </button>
           </div>
         )}

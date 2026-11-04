@@ -29,9 +29,8 @@ export default function FloatingWhatsApp() {
         className={`floating-wa-btn ${isScrolled ? "scrolled" : ""}`}
         aria-label="Chat with Adil Rahman on WhatsApp"
       >
-        <span className="floating-wa-pulse" />
         <div className="floating-wa-icon">
-          <MessageCircle size={22} />
+          <MessageCircle size={18} />
         </div>
         <span className="floating-wa-text">Chat on WhatsApp</span>
       </a>

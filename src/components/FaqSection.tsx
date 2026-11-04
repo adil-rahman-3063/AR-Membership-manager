@@ -10,7 +10,7 @@ const faqs = [
   },
   {
     q: "Can I use my existing business WhatsApp number?",
-    a: "Yes! You can use your existing phone number or a dedicated new SIM. We register it under the official Meta WhatsApp Cloud API so you get high delivery rates, official green tick compatibility, and zero risk of personal number bans.",
+    a: "Yes. You can use your existing phone number or a dedicated new SIM. We register it under the official Meta WhatsApp Cloud API so you get high delivery rates, official green tick compatibility, and zero risk of personal number bans.",
   },
   {
     q: "What if a member pays by cash or offline at the reception?",
@@ -43,15 +43,15 @@ export default function FaqSection() {
         <div className="sec-header">
           <div className="eyebrow">
             <HelpCircle size={14} />
-            <span>Frequently Asked Questions</span>
+            <span>Common questions</span>
           </div>
           <h2 className="h">Everything you need to know about AR</h2>
           <p className="sub">
-            Got questions before getting started? Here are answers to the most common questions from gym owners, academy directors, and studio managers.
+            Answers to common questions from gym owners, academy directors, and studio managers.
           </p>
         </div>
 
-        <div style={{ maxWidth: "800px", margin: "0 auto", display: "grid", gap: "14px" }}>
+        <div style={{ maxWidth: "780px", margin: "0 auto", display: "grid", gap: "12px" }}>
           {faqs.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
@@ -59,33 +59,33 @@ export default function FaqSection() {
                 key={idx}
                 style={{
                   background: "var(--bg-card)",
-                  border: isOpen ? "1px solid var(--lime-accent)" : "1px solid var(--border-subtle)",
-                  borderRadius: "16px",
+                  border: isOpen ? "1px solid rgba(184, 245, 60, 0.35)" : "1px solid var(--border-subtle)",
+                  borderRadius: "var(--radius-lg)",
                   overflow: "hidden",
-                  transition: "all 0.25s ease",
+                  transition: "border-color 0.2s var(--ease-craft)",
                 }}
               >
                 <button
                   onClick={() => toggle(idx)}
                   style={{
                     width: "100%",
-                    padding: "20px 24px",
+                    padding: "18px 22px",
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "center",
                     gap: "16px",
                     textAlign: "left",
                     color: "var(--text-primary)",
-                    fontSize: "17px",
-                    fontWeight: 700,
+                    fontSize: "16px",
+                    fontWeight: 600,
                   }}
                 >
                   <span>{faq.q}</span>
                   <ChevronDown
-                    size={20}
+                    size={18}
                     style={{
                       transform: isOpen ? "rotate(180deg)" : "rotate(0deg)",
-                      transition: "transform 0.25s ease",
+                      transition: "transform 0.2s var(--ease-craft)",
                       color: isOpen ? "var(--lime-accent)" : "var(--text-subtle)",
                       flexShrink: 0,
                     }}
@@ -95,9 +95,9 @@ export default function FaqSection() {
                 {isOpen && (
                   <div
                     style={{
-                      padding: "0 24px 22px",
+                      padding: "0 22px 20px",
                       color: "var(--text-muted)",
-                      fontSize: "15px",
+                      fontSize: "14.5px",
                       lineHeight: 1.6,
                     }}
                   >

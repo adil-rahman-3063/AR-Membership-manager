@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import { MessageCircle, CheckCircle2, ArrowRight, ShieldCheck, Zap, Sparkles, Check } from "lucide-react";
+import { MessageCircle, CheckCircle2, ArrowRight, Zap, Check } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
 
 interface HeroProps {
-  onOpenDemo: () => void;
+  onOpenDemo?: () => void;
 }
 
 const mockMembers = [
@@ -18,7 +18,7 @@ const mockMembers = [
     amount: "₹1,800",
     date: "25 Oct 2026",
     status: "due-soon",
-    statusText: "Due soon",
+    statusText: "Due in 3 days",
     daysLeft: "in 3 days",
   },
   {
@@ -70,7 +70,6 @@ export default function Hero() {
 
   return (
     <section className="hero-section">
-      <div className="bg-glow-radial" />
       <div className="wrap">
         <div className="hero-grid">
           <div className="hero-left">
@@ -81,7 +80,7 @@ export default function Hero() {
 
             <h1 className="h">
               Stop chasing payments. <br />
-              <em>Let WhatsApp do it.</em>
+              <span style={{ color: "var(--lime-accent)" }}>Let WhatsApp do it.</span>
             </h1>
 
             <p className="lead">
@@ -126,19 +125,19 @@ export default function Hero() {
           <div className="hero-right">
             <div className="mock">
               <div className="mock-badge">
-                <Sparkles size={12} />
-                <span>Live Interactive Simulation</span>
+                <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--lime-accent)", display: "inline-block" }} />
+                <span>Live dispatch preview</span>
               </div>
 
               {/* Member Card */}
               <div className="member-card">
                 <div className="member-header">
-                  <div style={{ display: "flex", gap: "14px", alignItems: "center" }}>
+                  <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
                     <div className="avatar-box">{member.initials}</div>
                     <div>
                       <div className="member-name">{member.name}</div>
                       <div className="member-sub">
-                        Member ID {member.memberId} · {member.plan}
+                        Member ID #{member.memberId} · {member.plan}
                       </div>
                     </div>
                   </div>
@@ -146,7 +145,7 @@ export default function Hero() {
                   <span
                     className={`chip ${isPaid ? "paid" : member.status === "overdue" ? "overdue" : "due-soon"}`}
                   >
-                    {isPaid ? "✓ Paid · Renewed" : member.statusText}
+                    {isPaid ? "Paid · Renewed" : member.statusText}
                   </span>
                 </div>
 
@@ -174,15 +173,15 @@ export default function Hero() {
                 <div className="wa-header">
                   <span className="wa-label">
                     <MessageCircle size={14} />
-                    WhatsApp Reminder (Auto-sent at 9:00 AM)
+                    <span>WhatsApp Reminder (9:00 AM IST)</span>
                   </span>
-                  <span className="wa-time">09:00 AM ✓✓</span>
+                  <span className="wa-time">09:00 AM · Meta Verified ✓✓</span>
                 </div>
 
                 <div className="wa-bubble-body">
                   Hello <b>{member.name}</b>, your membership fee of{" "}
                   <b>{member.amount}</b> is due {member.daysLeft} (<b>{member.date}</b>).
-                  Pay in one tap to record your renewal automatically:
+                  Tap below to clear dues and confirm your renewal:
                 </div>
 
                 {!isPaid ? (
@@ -198,9 +197,10 @@ export default function Hero() {
                   <div
                     style={{
                       marginTop: "12px",
-                      padding: "8px 14px",
-                      background: "rgba(37, 211, 102, 0.2)",
-                      borderRadius: "8px",
+                      padding: "8px 12px",
+                      background: "rgba(37, 211, 102, 0.15)",
+                      border: "1px solid rgba(37, 211, 102, 0.25)",
+                      borderRadius: "6px",
                       display: "flex",
                       alignItems: "center",
                       gap: "8px",
@@ -208,9 +208,9 @@ export default function Hero() {
                       color: "#b8f53c",
                     }}
                   >
-                    <Check size={16} />
+                    <Check size={15} />
                     <span>
-                      Payment verified via Cashfree. WhatsApp renewal confirmation sent.
+                      Payment verified via Cashfree. Renewal confirmation dispatched.
                     </span>
                   </div>
                 )}
@@ -234,27 +234,27 @@ export default function Hero() {
                 <div
                   style={{
                     position: "absolute",
-                    bottom: "-24px",
-                    left: "20px",
-                    right: "20px",
-                    background: "#064e3b",
-                    border: "1px solid #10b981",
+                    bottom: "-20px",
+                    left: "16px",
+                    right: "16px",
+                    background: "#0c271e",
+                    border: "1px solid rgba(52, 211, 153, 0.35)",
                     color: "#f4efe6",
-                    padding: "12px 18px",
-                    borderRadius: "12px",
-                    fontSize: "13.5px",
+                    padding: "10px 16px",
+                    borderRadius: "10px",
+                    fontSize: "13px",
                     display: "flex",
                     alignItems: "center",
                     gap: "10px",
-                    boxShadow: "0 10px 25px rgba(0,0,0,0.5)",
+                    boxShadow: "0 8px 24px rgba(0,0,0,0.4)",
                     zIndex: 10,
                   }}
                 >
-                  <CheckCircle2 size={18} color="#34d399" />
+                  <CheckCircle2 size={16} color="#34d399" />
                   <div>
-                    <strong>Payment Received: {member.amount}</strong>
-                    <div style={{ fontSize: "12px", color: "#a7f3d0" }}>
-                      Cashfree auto-marked transaction: Ledger updated & member renewed +1 Month!
+                    <strong>Payment received: {member.amount}</strong>
+                    <div style={{ fontSize: "12px", color: "var(--text-muted)" }}>
+                      Cashfree auto-marked transaction. Ledger updated and member renewed for 1 month.
                     </div>
                   </div>
                 </div>

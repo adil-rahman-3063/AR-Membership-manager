@@ -52,13 +52,13 @@ export default function Cadence() {
         <div className="sec-header">
           <div className="eyebrow">
             <Clock size={14} />
-            <span>Smart Automation Sequence</span>
+            <span>Reminder sequence</span>
           </div>
-          <h2 className="h">Three timely reminders. Zero chasing.</h2>
+          <h2 className="h">Three automated notices. No manual follow-ups.</h2>
           <p className="sub">
-            Every day at 9:00 AM IST, AR automatically checks who needs a message:
-            1 day before, on their due date, and 1 day overdue. Anyone already
-            marked Paid is skipped automatically, so nobody ever gets an unwanted reminder.
+            Every day at 9:00 AM IST, AR checks who needs a renewal notice:
+            1 day before, on their due date, and 1 day overdue. Members already
+            marked paid are skipped automatically to prevent false alarms.
           </p>
         </div>
 

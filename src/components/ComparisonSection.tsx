@@ -43,15 +43,13 @@ export default function ComparisonSection() {
       <div className="wrap">
         <div className="sec-header" style={{ textAlign: "center" }}>
           <div className="eyebrow">
-            <Zap size={14} />
-            <span>Why Switch To Autopilot?</span>
+            <span>Workflow comparison</span>
           </div>
           <h2 className="h" style={{ margin: "0 auto 16px" }}>
-            Manual Spreadsheets vs. AR Membership Manager
+            Spreadsheets vs. AR Membership Manager
           </h2>
           <p className="sub" style={{ margin: "0 auto" }}>
-            See why forward-thinking gym owners, academy directors, and studio
-            managers are ditching spreadsheets and manual WhatsApp chasing.
+            How automated WhatsApp reminders compare to manual records and follow-ups.
           </p>
         </div>
 
@@ -61,11 +59,11 @@ export default function ComparisonSection() {
             <div className="comp-header">
               <div className="comp-badge manual">
                 <AlertTriangle size={14} />
-                <span>The Old Way</span>
+                <span>Manual spreadsheets</span>
               </div>
-              <h3 className="comp-title">Spreadsheets & Manual Chasing</h3>
+              <h3 className="comp-title">Spreadsheets & manual follow-ups</h3>
               <p className="comp-sub">
-                Stressful, error-prone, and consumes 10–15 hours of staff time every week.
+                Time-consuming, prone to human error, and requires hours of front-desk effort every week.
               </p>
             </div>
 
@@ -89,11 +87,11 @@ export default function ComparisonSection() {
             <div className="comp-header">
               <div className="comp-badge ar">
                 <Zap size={14} />
-                <span>The AR Autopilot Way</span>
+                <span>Automated system</span>
               </div>
               <h3 className="comp-title">AR Membership Manager</h3>
               <p className="comp-sub">
-                Everything runs in the background. Members pay on time; you stay relaxed.
+                Dues tracked in the cloud, official WhatsApp notices dispatched on schedule, and renewals recorded instantly.
               </p>
             </div>
 
@@ -119,7 +117,7 @@ export default function ComparisonSection() {
                 className="btn"
                 style={{ width: "100%" }}
               >
-                <span>Upgrade To Autopilot Today</span>
+                <span>Switch to AR Membership</span>
                 <ArrowRight size={16} />
               </a>
             </div>

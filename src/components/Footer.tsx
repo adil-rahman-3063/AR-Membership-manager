@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Heart, MessageCircle, Mail, ExternalLink } from "lucide-react";
+import { MessageCircle, Mail, ExternalLink } from "lucide-react";
 import { WHATSAPP_DEMO_URL } from "@/lib/constants";
 
 export default function Footer() {
@@ -10,13 +10,13 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot">
           <div className="foot-left">
-            <div className="logo" style={{ fontSize: "20px" }}>
+            <div className="logo" style={{ fontSize: "18px" }}>
               <img
                 src="/ar-logo.png"
                 alt="AR Logo"
                 style={{
-                  width: "28px",
-                  height: "28px",
+                  width: "24px",
+                  height: "24px",
                   objectFit: "contain",
                 }}
               />
@@ -31,7 +31,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 style={{
                   color: "var(--lime-accent)",
-                  fontWeight: 700,
+                  fontWeight: 600,
                   textDecoration: "underline",
                   textUnderlineOffset: "3px",
                   display: "inline-flex",
@@ -70,7 +70,7 @@ export default function Footer() {
               style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}
             >
               <MessageCircle size={15} color="var(--lime-accent)" />
-              <span>WhatsApp Us</span>
+              <span>WhatsApp</span>
             </a>
             <span>© 2026 AR. All rights reserved.</span>
           </div>

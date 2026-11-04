@@ -21,12 +21,12 @@ export default function RoiCalculator() {
         <div className="sec-header">
           <div className="eyebrow">
             <Calculator size={14} />
-            <span>Interactive ROI Calculator</span>
+            <span>Revenue calculator</span>
           </div>
-          <h2 className="h">How much revenue are you losing to delayed dues?</h2>
+          <h2 className="h">How much revenue is delayed each month?</h2>
           <p className="sub">
-            When members forget their renewal date, cashflow halts and staff waste
-            hours sending manual messages. See what AR Membership recovers for you each month:
+            When members forget renewal dates, cashflow halts and staff spend hours
+            typing manual messages. See what automated WhatsApp payment links recover:
           </p>
         </div>
 
@@ -111,15 +111,15 @@ export default function RoiCalculator() {
               }}
             >
               <div>
-                <div style={{ fontSize: "11px", color: "var(--text-subtle)" }}>Time Saved</div>
-                <div style={{ fontSize: "18px", fontWeight: 700, color: "var(--text-primary)" }}>
+                <div style={{ fontSize: "12px", color: "var(--text-subtle)", marginBottom: "2px" }}>Time saved</div>
+                <div style={{ fontSize: "17px", fontWeight: 600, color: "var(--text-primary)", fontVariantNumeric: "tabular-nums" }}>
                   ~{hoursSaved} hrs/mo
                 </div>
               </div>
               <div>
-                <div style={{ fontSize: "11px", color: "var(--text-subtle)" }}>AR Monthly Fee</div>
-                <div style={{ fontSize: "18px", fontWeight: 700, color: "var(--lime-accent)" }}>
-                  ₹0 / mo (Buy once)
+                <div style={{ fontSize: "12px", color: "var(--text-subtle)", marginBottom: "2px" }}>AR monthly fee</div>
+                <div style={{ fontSize: "17px", fontWeight: 600, color: "var(--lime-accent)" }}>
+                  ₹0 / mo (Lifetime)
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ export default function RoiCalculator() {
               className="btn"
               style={{ width: "100%" }}
             >
-              <span>Get A Free Demo</span>
+              <span>Book a free demo</span>
               <ArrowRight size={16} />
             </a>
           </div>

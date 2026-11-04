@@ -76,14 +76,14 @@ export default function Features() {
       <div className="wrap">
         <div className="sec-header">
           <div className="eyebrow">
-            <span>Built For Subscription Businesses</span>
+            <span>Core capabilities</span>
           </div>
           <h2 className="h">
-            Everything a subscription business needs to get paid on time
+            Everything needed to track dues and collect payments on time
           </h2>
           <p className="sub">
             One unified dashboard for members, tiers, dues, payments, and WhatsApp
-            automation. No messy spreadsheets to chase, no awkward manual calls.
+            automation. No spreadsheets that fall out of date, no awkward manual calls.
           </p>
         </div>
 
@@ -96,20 +96,22 @@ export default function Features() {
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
-                    alignItems: "flex-start",
+                    alignItems: "center",
+                    marginBottom: "16px",
                   }}
                 >
-                  <div className="ic">
-                    <Icon size={24} />
+                  <div className="ic" style={{ marginBottom: 0 }}>
+                    <Icon size={18} strokeWidth={1.75} />
                   </div>
                   <span
                     style={{
-                      fontSize: "11px",
-                      fontWeight: 700,
+                      fontSize: "12px",
+                      fontWeight: 600,
                       color: "var(--lime-accent)",
-                      background: "rgba(184, 245, 60, 0.1)",
-                      padding: "4px 10px",
-                      borderRadius: "999px",
+                      background: "rgba(184, 245, 60, 0.08)",
+                      border: "1px solid rgba(184, 245, 60, 0.2)",
+                      padding: "2px 8px",
+                      borderRadius: "var(--radius-xs)",
                     }}
                   >
                     {f.tag}

@@ -31,12 +31,12 @@ export default function DataOwnership() {
         <div className="sec-header">
           <div className="eyebrow">
             <Lock size={14} />
-            <span>Absolute Data Sovereignty</span>
+            <span>Data ownership</span>
           </div>
           <h2 className="h">Your data stays in your accounts, not ours</h2>
           <p className="sub">
-            Each business gets its own independent database. Chats, members, and
-            payments are never mixed with anyone else's or locked behind proprietary walls.
+            Each business gets an isolated database and continuous Google Sheets backup.
+            Member records and payment logs are never co-mingled or locked in.
           </p>
         </div>
 
@@ -53,17 +53,18 @@ export default function DataOwnership() {
                     marginBottom: "16px",
                   }}
                 >
-                  <div className="ic">
-                    <Icon size={24} />
+                  <div className="ic" style={{ marginBottom: 0 }}>
+                    <Icon size={18} strokeWidth={1.75} />
                   </div>
                   <span
                     style={{
-                      fontSize: "11px",
-                      fontWeight: 700,
+                      fontSize: "12px",
+                      fontWeight: 600,
                       color: "var(--lime-accent)",
-                      background: "rgba(184, 245, 60, 0.1)",
-                      padding: "4px 10px",
-                      borderRadius: "999px",
+                      background: "rgba(184, 245, 60, 0.08)",
+                      border: "1px solid rgba(184, 245, 60, 0.2)",
+                      padding: "2px 8px",
+                      borderRadius: "var(--radius-xs)",
                     }}
                   >
                     {it.tag}

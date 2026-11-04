@@ -16,15 +16,14 @@ export default function Navbar() {
               src="/ar-logo.png"
               alt="AR Logo"
               style={{
-                width: "40px",
-                height: "40px",
+                width: "36px",
+                height: "36px",
                 objectFit: "contain",
-                filter: "drop-shadow(0 0 10px rgba(184, 245, 60, 0.3))",
               }}
             />
-            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1 }}>
-              <span style={{ fontSize: "24px", fontWeight: 800, letterSpacing: "-0.02em" }}>AR</span>
-              <span style={{ fontSize: "10px", color: "var(--lime-accent)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Membership</span>
+            <div style={{ display: "flex", flexDirection: "column", lineHeight: 1.1 }}>
+              <span style={{ fontSize: "20px", fontWeight: 700, letterSpacing: "-0.02em" }}>AR</span>
+              <span style={{ fontSize: "11px", color: "var(--text-subtle)", fontWeight: 500 }}>Membership</span>
             </div>
           </a>
 

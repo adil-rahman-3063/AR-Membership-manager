@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Check, MessageCircle, Info, Sparkles, ShieldCheck, Clock, Layers } from "lucide-react";
+import { Check, MessageCircle, Info, ShieldCheck, Clock, Layers } from "lucide-react";
 import { getWhatsAppPlanUrl } from "@/lib/constants";
 
 export default function Pricing() {
@@ -32,8 +32,7 @@ export default function Pricing() {
       <div className="wrap">
         <div className="sec-header">
           <div className="eyebrow">
-            <Sparkles size={14} />
-            <span>Flexible Options</span>
+            <span>Pricing options</span>
           </div>
           <h2 className="h">Two ways to power your membership dues</h2>
           <p className="sub">
@@ -47,31 +46,29 @@ export default function Pricing() {
             className="plan"
             style={{
               position: "relative",
-              border: "1px solid rgba(184, 245, 60, 0.4)",
-              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(184, 245, 60, 0.08)",
-              background: "linear-gradient(180deg, rgba(38, 24, 16, 0.95) 0%, rgba(22, 14, 9, 0.98) 100%)",
+              border: "1px solid var(--border-active)",
+              background: "var(--bg-card)",
             }}
           >
             <div
               style={{
                 position: "absolute",
-                top: "-13px",
-                left: "28px",
-                background: "var(--lime-accent)",
-                color: "var(--text-dark)",
-                fontSize: "11.5px",
-                fontWeight: 800,
-                padding: "4px 14px",
-                borderRadius: "999px",
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
+                top: "-12px",
+                left: "24px",
+                background: "var(--bg-surface)",
+                border: "1px solid var(--border-strong)",
+                color: "var(--lime-accent)",
+                fontSize: "12px",
+                fontWeight: 600,
+                padding: "3px 10px",
+                borderRadius: "var(--radius-sm)",
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "5px",
+                gap: "6px",
               }}
             >
-              <Sparkles size={13} />
-              <span>Available Now · Lifetime Subscription</span>
+              <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--lime-accent)", display: "inline-block" }} />
+              <span>Available now · Lifetime subscription</span>
             </div>
 
             <div>
@@ -82,40 +79,40 @@ export default function Pricing() {
                   alignItems: "flex-start",
                   flexWrap: "wrap",
                   gap: "10px",
-                  marginTop: "6px",
+                  marginTop: "4px",
                 }}
               >
                 <div>
-                  <h3 style={{ margin: "0 0 6px" }}>Lifetime Subscription</h3>
+                  <h3 style={{ margin: "0 0 4px" }}>Lifetime Subscription</h3>
                   <p className="plan-sub">
                     Your own dedicated instance on your own infrastructure.{" "}
-                    <b style={{ color: "var(--lime-accent)" }}>Introductory price.</b>
+                    <span style={{ color: "var(--lime-accent)", fontWeight: 500 }}>Introductory price</span>
                   </p>
                 </div>
 
                 <div
                   style={{
-                    background: "rgba(184, 245, 60, 0.1)",
-                    border: "1px solid rgba(184, 245, 60, 0.25)",
-                    padding: "5px 12px",
-                    borderRadius: "8px",
+                    background: "rgba(184, 245, 60, 0.08)",
+                    border: "1px solid rgba(184, 245, 60, 0.2)",
+                    padding: "3px 8px",
+                    borderRadius: "var(--radius-xs)",
                     fontSize: "12px",
-                    fontWeight: 700,
+                    fontWeight: 600,
                     color: "var(--lime-accent)",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "5px",
                   }}
                 >
-                  <ShieldCheck size={15} />
-                  <span>100% Code Ownership</span>
+                  <ShieldCheck size={14} />
+                  <span>100% Code ownership</span>
                 </div>
               </div>
 
               <div
                 className="price"
                 style={{
-                  margin: "20px 0 8px",
+                  margin: "18px 0 8px",
                   display: "flex",
                   alignItems: "baseline",
                   flexWrap: "wrap",
@@ -124,33 +121,30 @@ export default function Pricing() {
               >
                 <span
                   style={{
-                    fontSize: "24px",
-                    fontWeight: 600,
+                    fontSize: "22px",
+                    fontWeight: 500,
                     color: "var(--text-subtle)",
                     textDecoration: "line-through",
                     textDecorationColor: "#ef4444",
-                    textDecorationThickness: "2.5px",
                   }}
                 >
                   ₹20,000
                 </span>
-                <span style={{ fontSize: "40px", fontWeight: 800, color: "var(--text-primary)" }}>
+                <span style={{ fontSize: "38px", fontWeight: 700, color: "var(--text-primary)" }}>
                   ₹14,999
                 </span>
-                <span style={{ fontSize: "15px", fontWeight: 500, color: "var(--text-muted)" }}>
+                <span style={{ fontSize: "14.5px", fontWeight: 500, color: "var(--text-muted)" }}>
                   one-time
                 </span>
                 <span
                   style={{
                     fontSize: "11px",
-                    fontWeight: 800,
-                    background: "rgba(184, 245, 60, 0.15)",
+                    fontWeight: 600,
+                    background: "rgba(184, 245, 60, 0.1)",
                     color: "var(--lime-accent)",
-                    border: "1px solid rgba(184, 245, 60, 0.3)",
-                    padding: "3px 8px",
-                    borderRadius: "6px",
-                    letterSpacing: "0.03em",
-                    textTransform: "uppercase",
+                    border: "1px solid rgba(184, 245, 60, 0.25)",
+                    padding: "2px 7px",
+                    borderRadius: "var(--radius-xs)",
                   }}
                 >
                   Save ₹5,001
@@ -162,35 +156,35 @@ export default function Pricing() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  background: "rgba(255, 255, 255, 0.04)",
+                  background: "var(--bg-surface)",
                   border: "1px solid var(--border-subtle)",
-                  padding: "6px 12px",
-                  borderRadius: "8px",
+                  padding: "5px 12px",
+                  borderRadius: "var(--radius-sm)",
                   fontSize: "13px",
                   color: "var(--text-muted)",
                   margin: "0 0 16px",
                   flexWrap: "wrap",
                 }}
               >
-                <span style={{ color: "var(--lime-accent)", fontWeight: 700 }}>
+                <span style={{ color: "var(--lime-accent)", fontWeight: 600 }}>
                   + ₹500 one-time setup fee
                 </span>
                 <span style={{ color: "var(--text-subtle)" }}>•</span>
-                <span>For complete Meta WhatsApp Cloud API & Cashfree gateway setup</span>
+                <span>Complete Meta WhatsApp API & Cashfree gateway configuration</span>
               </div>
 
-              <p style={{ fontSize: "13.5px", color: "var(--text-muted)", margin: "0 0 20px" }}>
+              <p style={{ fontSize: "13.5px", color: "var(--text-muted)", margin: "0 0 18px" }}>
                 Everything configured, verified, and handed over ready to collect payments.
               </p>
 
               <div
                 style={{
                   display: "grid",
-                  gap: "12px",
-                  margin: "20px 0 28px",
-                  padding: "18px",
-                  background: "rgba(10, 6, 4, 0.4)",
-                  borderRadius: "14px",
+                  gap: "10px",
+                  margin: "18px 0 24px",
+                  padding: "16px",
+                  background: "var(--bg-surface)",
+                  borderRadius: "var(--radius-md)",
                   border: "1px solid var(--border-subtle)",
                 }}
               >
@@ -201,8 +195,8 @@ export default function Pricing() {
                       display: "flex",
                       alignItems: "flex-start",
                       gap: "10px",
-                      fontSize: "14px",
-                      color: "#e8dccf",
+                      fontSize: "13.5px",
+                      color: "var(--text-primary)",
                       lineHeight: 1.45,
                     }}
                   >
@@ -210,8 +204,8 @@ export default function Pricing() {
                       style={{
                         width: "18px",
                         height: "18px",
-                        borderRadius: "50%",
-                        background: "rgba(184, 245, 60, 0.15)",
+                        borderRadius: "var(--radius-xs)",
+                        background: "rgba(184, 245, 60, 0.12)",
                         color: "var(--lime-accent)",
                         display: "flex",
                         alignItems: "center",
@@ -220,7 +214,7 @@ export default function Pricing() {
                         marginTop: "2px",
                       }}
                     >
-                      <Check size={11} strokeWidth={3} />
+                      <Check size={11} strokeWidth={2} />
                     </div>
                     <span>{feat}</span>
                   </div>
@@ -237,7 +231,7 @@ export default function Pricing() {
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <MessageCircle size={18} />
-                <span>Get Lifetime Subscription on WhatsApp (₹14,999 + ₹500 setup)</span>
+                <span>Get Lifetime Subscription on WhatsApp</span>
               </a>
 
               <div
@@ -247,14 +241,16 @@ export default function Pricing() {
                   alignItems: "center",
                   gap: "14px",
                   flexWrap: "wrap",
-                  marginTop: "14px",
+                  marginTop: "12px",
                   fontSize: "12px",
                   color: "var(--text-subtle)",
                 }}
               >
-                <span>✓ Ready in 48–72 hours</span>
-                <span>✓ 14 days handover support</span>
-                <span>✓ Free member migration</span>
+                <span>Ready in 48–72 hours</span>
+                <span>•</span>
+                <span>14 days handover support</span>
+                <span>•</span>
+                <span>Free member migration</span>
               </div>
             </div>
           </div>
@@ -264,32 +260,29 @@ export default function Pricing() {
             className="plan"
             style={{
               position: "relative",
-              border: "1px dashed rgba(255, 255, 255, 0.22)",
-              background: "linear-gradient(180deg, rgba(28, 18, 13, 0.85) 0%, rgba(18, 11, 7, 0.95) 100%)",
+              border: "1px dashed var(--border-strong)",
+              background: "var(--bg-surface)",
             }}
           >
             <div
               style={{
                 position: "absolute",
-                top: "-13px",
-                left: "28px",
-                background: "rgba(255, 255, 255, 0.1)",
-                color: "var(--text-primary)",
-                border: "1px solid rgba(255, 255, 255, 0.22)",
-                fontSize: "11.5px",
-                fontWeight: 800,
-                padding: "4px 14px",
-                borderRadius: "999px",
-                textTransform: "uppercase",
-                letterSpacing: "0.05em",
+                top: "-12px",
+                left: "24px",
+                background: "var(--bg-surface)",
+                border: "1px solid var(--border-strong)",
+                color: "var(--text-muted)",
+                fontSize: "12px",
+                fontWeight: 600,
+                padding: "3px 10px",
+                borderRadius: "var(--radius-sm)",
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "6px",
-                backdropFilter: "blur(8px)",
               }}
             >
               <Clock size={13} color="var(--lime-accent)" />
-              <span>Coming Soon · Monthly Subscription</span>
+              <span>Coming soon · Monthly subscription</span>
             </div>
 
             <div>
@@ -300,63 +293,61 @@ export default function Pricing() {
                   alignItems: "flex-start",
                   flexWrap: "wrap",
                   gap: "10px",
-                  marginTop: "6px",
+                  marginTop: "4px",
                 }}
               >
                 <div>
-                  <h3 style={{ margin: "0 0 6px" }}>Cloud SaaS</h3>
+                  <h3 style={{ margin: "0 0 4px" }}>Cloud SaaS</h3>
                   <p className="plan-sub">
                     We host, monitor, and manage everything for you.{" "}
-                    <b style={{ color: "var(--text-primary)" }}>Monthly billing.</b>
+                    <span style={{ color: "var(--text-primary)", fontWeight: 500 }}>Monthly billing</span>
                   </p>
                 </div>
 
                 <div
                   style={{
-                    background: "rgba(255, 255, 255, 0.05)",
+                    background: "rgba(244, 239, 230, 0.05)",
                     border: "1px solid var(--border-subtle)",
-                    padding: "5px 12px",
-                    borderRadius: "8px",
+                    padding: "3px 8px",
+                    borderRadius: "var(--radius-xs)",
                     fontSize: "12px",
-                    fontWeight: 700,
-                    color: "var(--text-muted)",
+                    fontWeight: 600,
+                    color: "var(--text-subtle)",
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "5px",
                   }}
                 >
-                  <Layers size={15} />
-                  <span>Fully Managed</span>
+                  <Layers size={14} />
+                  <span>Fully managed</span>
                 </div>
               </div>
 
               <div
                 className="price"
                 style={{
-                  margin: "20px 0 8px",
+                  margin: "18px 0 8px",
                   display: "flex",
                   alignItems: "baseline",
                   flexWrap: "wrap",
                   gap: "10px",
                 }}
               >
-                <span style={{ fontSize: "36px", fontWeight: 800, color: "var(--text-primary)" }}>
+                <span style={{ fontSize: "34px", fontWeight: 700, color: "var(--text-primary)" }}>
                   Monthly Plan
                 </span>
                 <span
                   style={{
                     fontSize: "11px",
-                    fontWeight: 800,
-                    background: "rgba(255, 255, 255, 0.08)",
+                    fontWeight: 600,
+                    background: "rgba(244, 239, 230, 0.08)",
                     color: "var(--text-muted)",
                     border: "1px solid var(--border-subtle)",
-                    padding: "3px 8px",
-                    borderRadius: "6px",
-                    letterSpacing: "0.03em",
-                    textTransform: "uppercase",
+                    padding: "2px 7px",
+                    borderRadius: "var(--radius-xs)",
                   }}
                 >
-                  In Development
+                  In development
                 </span>
               </div>
 
@@ -365,35 +356,35 @@ export default function Pricing() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  background: "rgba(255, 255, 255, 0.04)",
+                  background: "var(--bg-main)",
                   border: "1px solid var(--border-subtle)",
-                  padding: "6px 12px",
-                  borderRadius: "8px",
+                  padding: "5px 12px",
+                  borderRadius: "var(--radius-sm)",
                   fontSize: "13px",
                   color: "var(--text-muted)",
                   margin: "0 0 16px",
                   flexWrap: "wrap",
                 }}
               >
-                <span style={{ color: "var(--text-primary)", fontWeight: 700 }}>
+                <span style={{ color: "var(--text-primary)", fontWeight: 600 }}>
                   Zero technical setup
                 </span>
                 <span style={{ color: "var(--text-subtle)" }}>•</span>
                 <span>Simple pay-as-you-grow monthly subscription</span>
               </div>
 
-              <p style={{ fontSize: "13.5px", color: "var(--text-muted)", margin: "0 0 20px" }}>
-                Ideal for managers who want zero infrastructure setup and instant activation.
+              <p style={{ fontSize: "13.5px", color: "var(--text-muted)", margin: "0 0 18px" }}>
+                Designed for managers who want cloud hosting without maintaining infrastructure.
               </p>
 
               <div
                 style={{
                   display: "grid",
-                  gap: "12px",
-                  margin: "20px 0 28px",
-                  padding: "18px",
-                  background: "rgba(10, 6, 4, 0.4)",
-                  borderRadius: "14px",
+                  gap: "10px",
+                  margin: "18px 0 24px",
+                  padding: "16px",
+                  background: "var(--bg-main)",
+                  borderRadius: "var(--radius-md)",
                   border: "1px solid var(--border-subtle)",
                 }}
               >
@@ -404,7 +395,7 @@ export default function Pricing() {
                       display: "flex",
                       alignItems: "flex-start",
                       gap: "10px",
-                      fontSize: "14px",
+                      fontSize: "13.5px",
                       color: "var(--text-muted)",
                       lineHeight: 1.45,
                     }}
@@ -413,9 +404,9 @@ export default function Pricing() {
                       style={{
                         width: "18px",
                         height: "18px",
-                        borderRadius: "50%",
-                        background: "rgba(255, 255, 255, 0.08)",
-                        color: "var(--text-muted)",
+                        borderRadius: "var(--radius-xs)",
+                        background: "rgba(244, 239, 230, 0.08)",
+                        color: "var(--text-subtle)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -423,7 +414,7 @@ export default function Pricing() {
                         marginTop: "2px",
                       }}
                     >
-                      <Check size={11} strokeWidth={3} />
+                      <Check size={11} strokeWidth={2} />
                     </div>
                     <span>{feat}</span>
                   </div>
@@ -440,7 +431,7 @@ export default function Pricing() {
                 style={{ width: "100%", justifyContent: "center" }}
               >
                 <MessageCircle size={18} />
-                <span>Join SaaS Waitlist on WhatsApp</span>
+                <span>Join SaaS waitlist on WhatsApp</span>
               </a>
 
               <div
@@ -450,33 +441,33 @@ export default function Pricing() {
                   alignItems: "center",
                   gap: "14px",
                   flexWrap: "wrap",
-                  marginTop: "14px",
+                  marginTop: "12px",
                   fontSize: "12px",
                   color: "var(--text-subtle)",
                 }}
               >
-                <span>✓ Guaranteed early bird discount</span>
-                <span>✓ No payment required today</span>
-                <span>✓ Priority launch access</span>
+                <span>Early bird discount reserved</span>
+                <span>•</span>
+                <span>No payment required today</span>
+                <span>•</span>
+                <span>Priority launch access</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Transparent Note */}
-        <div className="pricing-note" style={{ maxWidth: "100%", margin: "28px auto 0" }}>
+        <div className="pricing-note">
           <div style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-            <Info size={20} color="var(--lime-accent)" style={{ flexShrink: 0, marginTop: "2px" }} />
+            <Info size={18} color="var(--lime-accent)" style={{ flexShrink: 0, marginTop: "2px" }} />
             <div>
               <strong style={{ color: "var(--text-primary)" }}>
-                Direct third-party transparency:
+                Third-party transparency:
               </strong>{" "}
-              Third-party API charges are separate and paid directly by you without
-              any markup. Meta bills official WhatsApp conversation rates directly
-              to your card (approx. ~₹0.80 per conversation window). Cashfree
-              offers 0% platform fee on your first ₹20 lakh of collections, then
-              standard gateway rates (~1.95% + GST). You retain 100% legal ownership
-              of your Meta, Google, and Cashfree credentials.
+              Third-party API charges are separate and paid directly by you without markup.
+              Meta bills WhatsApp conversation fees directly to your linked card at official rates (~₹0.80 per conversation window).
+              Cashfree offers a 0% platform fee on your first ₹20 lakh of collections, followed by standard gateway rates (~1.95% + GST).
+              You retain legal ownership of your Meta, Google, and Cashfree credentials.
             </div>
           </div>
         </div>
