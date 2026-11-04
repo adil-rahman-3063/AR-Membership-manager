@@ -59,9 +59,9 @@ export default function Footer() {
             >
               <span>adilrahman.cc</span>
             </a>
-            <a href="mailto:hello@adilrahman.cc" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adilrahman3063@gmail.com&su=Requesting+Demo+-+AR+Membership+Software&body=Hi+Adil,%0A%0AI+came+across+your+AR+Membership+software+and+would+love+to+see+a+quick+demo+to+learn+more+about+how+it+works.%0A%0APlease+let+me+know+your+availability+for+a+brief+call+or+walkthrough.%0A%0AThanks!" style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
               <Mail size={15} color="var(--lime-accent)" />
-              <span>hello@adilrahman.cc</span>
+              <span>adilrahman3063@gmail.com</span>
             </a>
             <a
               href={WHATSAPP_DEMO_URL}
