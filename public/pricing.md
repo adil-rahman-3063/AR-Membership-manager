@@ -17,11 +17,14 @@ Last updated: November 2026. All prices are in Indian Rupees (INR).
 ## 2. Cloud SaaS Plan (Hosted Monthly Subscription)
 - **Status**: Coming Soon / Early Access Waitlist
 - **Billing**: Monthly recurring subscription
-- **Upfront Setup Fee**: ₹0
+- **Upfront Setup Fee**: ₹0 (We configure your Meta WhatsApp Cloud API & Cashfree gateway for free)
 - **Hosting**: Managed by AR team (no Cloudflare or database setup required from client)
-- **Maintenance**: Automated backups, continuous feature rollouts, and managed Meta API infrastructure
+- **Meta WhatsApp API**: Set up in client's own official Meta Business account (isolated, never pooled or shared). Client pays Meta directly for conversation usage at official utility rates.
+- **Cashfree Gateway**: Configured in client's own business name. 100% of collected dues settle directly into client's bank account; Cashfree deducts standard gateway fees (eligible for initial free tiers). AR takes 0% commission.
+- **Maintenance**: Automated backups, continuous feature rollouts, and managed cloud infrastructure
 
 ## Payment & Onboarding Contact
 - Direct WhatsApp Demo: https://wa.me/919207114070?text=Hi%20Adil,%20I%20am%20interested%20in%20AR%20Membership%20Manager
 - Developer Email: adilrahman3063@gmail.com
 - Live Site: https://membership-saas.adilrahman.cc
+

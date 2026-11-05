@@ -57,7 +57,9 @@ Reminders dispatch automatically at 9:00 AM Indian Standard Time:
 ### Option B: Cloud SaaS Plan (Hosted Monthly Subscription)
 - **Status**: Early Access Waitlist / Coming Soon
 - **Billing**: Monthly recurring subscription
-- **Hosting**: Managed cloud infrastructure with automated backups
+- **Upfront Setup Fee**: ₹0 (We configure your Meta WhatsApp Cloud API and Cashfree gateway for free)
+- **Hosting**: Managed cloud infrastructure with automated backups (no Cloudflare account needed from client)
+- **Account Isolation**: Meta API and Cashfree are configured directly in client's own accounts (never shared or pooled). Client pays Meta directly for message usage. All payments settle directly into client's bank account via Cashfree (standard gateway fee applies after free processing tiers). AR takes 0% cut.
 
 ---
 
@@ -87,3 +89,4 @@ A: With AR, late renewals are fair and automatic: an expired member renews from 
 - WhatsApp: https://wa.me/919207114070
 - Email: adilrahman3063@gmail.com
 - Website: https://membership-saas.adilrahman.cc
+

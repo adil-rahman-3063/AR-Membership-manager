@@ -18,13 +18,13 @@ export default function Pricing() {
   ];
 
   const saasFeatures = [
-    "Managed high-availability cloud hosting (zero setup required)",
-    "No Cloudflare, database, or technical configuration needed from you",
-    "Official Meta WhatsApp Cloud API automated messaging included",
-    "Automated 9:00 AM renewal alerts, overdue notices & payment receipts",
-    "1-tap UPI payment links with automated ledger tracking",
+    "Managed high-availability cloud hosting (we run and monitor the server for you)",
+    "₹0 setup fee — we configure your Meta WhatsApp API & Cashfree for free",
+    "Dedicated Meta WhatsApp API in your own account (never shared or pooled)",
+    "Cashfree gateway in your own name — all payments settle directly to your bank",
+    "Automated 9:00 AM renewal alerts, overdue notices & instant receipts",
     "Continuous software updates, new feature rollouts & automated backups",
-    "Low upfront commitment with flexible cancel-anytime billing",
+    "Low upfront commitment with flexible cancel-anytime monthly billing",
     "Guaranteed locked-in early bird pricing for waitlist members",
   ];
 
@@ -449,11 +449,32 @@ export default function Pricing() {
                   color: "var(--text-subtle)",
                 }}
               >
+                <span>Zero setup fee</span>
+                <span>•</span>
                 <span>Early bird discount reserved</span>
                 <span>•</span>
                 <span>No payment required today</span>
-                <span>•</span>
-                <span>Priority launch access</span>
+              </div>
+
+              <div
+                style={{
+                  marginTop: "14px",
+                  padding: "10px 12px",
+                  borderRadius: "var(--radius-sm)",
+                  background: "var(--bg-main)",
+                  border: "1px solid var(--border-subtle)",
+                  fontSize: "12px",
+                  color: "var(--text-subtle)",
+                  lineHeight: 1.5,
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: "8px",
+                }}
+              >
+                <Info size={14} color="var(--lime-accent)" style={{ flexShrink: 0, marginTop: "2px" }} />
+                <span>
+                  <strong style={{ color: "var(--text-muted)", fontWeight: 600 }}>Accounts & payments:</strong> ₹0 setup fee (we configure your Meta API & Cashfree for free). Meta WhatsApp fees are paid directly to Meta. Cashfree deposits all collections straight into your bank account, deducting standard gateway fees.
+                </span>
               </div>
             </div>
           </div>
@@ -465,12 +486,9 @@ export default function Pricing() {
             <Info size={18} color="var(--lime-accent)" style={{ flexShrink: 0, marginTop: "2px" }} />
             <div>
               <strong style={{ color: "var(--text-primary)" }}>
-                Third-party transparency:
+                Third-party transparency (Lifetime & SaaS):
               </strong>{" "}
-              Third-party API charges are separate and paid directly by you without markup.
-              Meta bills WhatsApp conversation fees directly to your linked card at official rates (~₹0.80 per conversation window).
-              Cashfree offers a 0% platform fee on your first ₹20 lakh of collections, followed by standard gateway rates (~1.95% + GST).
-              You retain legal ownership of your Meta, Google, and Cashfree credentials.
+              In both Lifetime and SaaS, your Meta WhatsApp Cloud API and Cashfree gateway are configured directly in your own business accounts—never shared, pooled, or co-mingled with us. We configure both for you (₹500 for Lifetime, ₹0 for SaaS). You pay Meta directly for WhatsApp template messages at official utility rates (~₹0.35–₹0.80 per conversation). For Cashfree, all member payments settle directly into your bank account, and Cashfree deducts their standard gateway fee (with initial free processing tiers where eligible). AR never touches your funds.
             </div>
           </div>
         </div>

@@ -19,8 +19,8 @@ AR Membership Manager replaces manual spreadsheet tracking and awkward follow-up
 - Co-working Spaces & Monthly Subscription Businesses
 
 ## Pricing (2026)
-- **Lifetime Subscription**: ₹14,999 one-time (originally ₹20,000) + ₹500 setup fee. Zero monthly platform fees. Unlimited members.
-- **Cloud SaaS**: Monthly subscription (Waitlist open).
+- **Lifetime Subscription**: ₹14,999 one-time (originally ₹20,000) + ₹500 setup fee. Zero monthly platform fees. Unlimited members. Deployed to client's Cloudflare.
+- **Cloud SaaS**: Monthly subscription (Waitlist open). ₹0 setup fee (free configuration). Meta API & Cashfree configured in client's own accounts with zero platform fee cuts. Payments settle directly into client's bank account.
 
 ## Developer & Contact
 - Engineered by Adil Rahman
@@ -33,3 +33,4 @@ AR Membership Manager replaces manual spreadsheet tracking and awkward follow-up
 - [Full Documentation & Product Guide](/llms-full.txt): Complete product guide, comparison tables, and FAQ in a single file.
 - [Structured Pricing](/pricing.md): Plain-text pricing and feature breakdown for buying agents.
 - [Agent Skill](/SKILL.md): Structured instructions for AI agents to evaluate requirements and generate demo links.
+
