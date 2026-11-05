@@ -27,6 +27,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Adil Rahman", url: "https://adilrahman.cc" }],
   creator: "Adil Rahman",
   publisher: "Adil Rahman",
+  icons: {
+    icon: "/ar-logo.png",
+    shortcut: "/ar-logo.png",
+    apple: "/ar-logo.png",
+  },
   openGraph: {
     title: "WhatsApp Membership Dues & Payment Reminders | AR Manager",
     description:
@@ -48,6 +53,20 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://membership-saas.adilrahman.cc/#website",
+      "url": "https://membership-saas.adilrahman.cc",
+      "name": "AR Membership",
+      "alternateName": ["AR Membership Manager", "AR"],
+      "description":
+        "Automated membership dues tracking and renewal system with WhatsApp reminders and 1-tap UPI payment links.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Adil Rahman",
+        "url": "https://adilrahman.cc",
+      },
+    },
     {
       "@type": "SoftwareApplication",
       "name": "AR Membership Manager",
